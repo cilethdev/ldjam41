@@ -1,6 +1,7 @@
 /// @description 
 event_inherited();
 enum bType {
+	gotoPhoneTest,
 	gotoRm,
 	exitGame,
 	resume,

@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "6100262d-6889-45bc-a921-0c7badc7afe0",
+            "Value": {
+                "id": "23070c6d-df69-47fb-9d6a-fcd0e00af98c",
+                "resourcePath": "rooms\\rm_phoneTest\\rm_phoneTest.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "613df350-7990-4b4b-8d8b-43113635f487",
             "Value": {
                 "id": "d23b2fe7-f36c-4110-8b3a-186b76586b70",
@@ -900,6 +908,14 @@
                 "id": "5671597b-c06f-480b-b8fc-16252296c52d",
                 "resourcePath": "scripts\\Approach\\Approach.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fc86914a-0ed9-4121-998a-ece778b68e8a",
+            "Value": {
+                "id": "9dfa5689-cb4c-475f-b82c-ddc3a9b33086",
+                "resourcePath": "objects\\Phone\\Phone.yy",
+                "resourceType": "GMObject"
             }
         },
         {
