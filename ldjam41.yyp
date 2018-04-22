@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "092f7522-fa52-45ec-8a2e-beacd15de885",
+            "Value": {
+                "id": "576cdcee-1894-475d-bc7d-812c100c5f0e",
+                "resourcePath": "fonts\\fnt_response\\fnt_response.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "09b37c6e-6866-4cf2-bfaf-c8e76021c60d",
             "Value": {
                 "id": "d2f82759-1c34-428b-9ef6-c00cca130afa",
@@ -487,6 +495,14 @@
             }
         },
         {
+            "Key": "70fd1393-d983-462b-af30-864567683089",
+            "Value": {
+                "id": "7794c1b3-1874-4aa1-9e39-0bf9ba567dcd",
+                "resourcePath": "scripts\\PhoneDrawResponseBox\\PhoneDrawResponseBox.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "736f93de-28d1-4d79-b633-5dbd2a6ecc15",
             "Value": {
                 "id": "d8193acd-cb54-4e6c-a8b9-c4e32bb0b9f5",
@@ -874,7 +890,7 @@
             "Key": "d21e12b9-ccee-45d0-882c-b9788623e828",
             "Value": {
                 "id": "e464d021-012a-4d8e-8bf2-a6b1eefc2b3a",
-                "resourcePath": "scripts\\PhoneDrawResponse\\PhoneDrawResponse.yy",
+                "resourcePath": "scripts\\PhoneDrawResponseMessage\\PhoneDrawResponseMessage.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1082,6 +1098,7 @@
         "fc91e9c5-d8e6-469c-80fb-c1e6db2e6416",
         "bf42fe07-2a9d-4579-b90c-f0fe31f266d7",
         "d21e12b9-ccee-45d0-882c-b9788623e828",
+        "70fd1393-d983-462b-af30-864567683089",
         "b392ddec-9055-4f81-998a-ca7bb1499698"
     ],
     "tutorial": ""

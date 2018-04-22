@@ -45,14 +45,20 @@ surface_set_target(phoneSurface); // begin drawing to the phone.
 	//draw the responses.
 	
 	draw_text(phoneWidth/2,namey,herName)
-	draw_text(phoneWidth/2+responseButtonPadding,firstResponsey,response[0]);
-	draw_text(phoneWidth/2+responseButtonPadding,secondResponsey,response[1]);
-	draw_text(phoneWidth/2+responseButtonPadding,thirdResponsey,response[2]);
+	
+	PhoneDrawResponseMessage(phoneWidth/2,firstResponsey,response[0],responseKey[0],0);
+	PhoneDrawResponseMessage(phoneWidth/2,secondResponsey,response[1],responseKey[1],0);
+	PhoneDrawResponseMessage(phoneWidth/2,thirdResponsey,response[2],-1,0);
 surface_reset_target(); // finish drawing to the phone.
 
 var rx = (dcos(-direction)*phoneWidth/2)-(dsin(-direction)*phoneHeight/2);
 var ry = (dsin(-direction)*phoneWidth/2)+(dcos(-direction)*phoneHeight/2);
 draw_surface_ext(phoneSurface,x-rx,y-ry,1,1,direction,c_white,1);
+
+
+//test zone
+//draw the last pressed key.
+draw_sprite(spr_replyKeys,lastKeyPressed,0,0);
 
 // glass.
 //		can get cracked.

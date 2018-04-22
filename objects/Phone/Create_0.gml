@@ -32,7 +32,7 @@ screenSurface = -1; //this is where the messages will be drawn to.  then the por
 
 //animation crap.
 ani_rumbleRate = 8;
-ani_rumbleScale = 10;
+ani_rumbleScale = 5;
 ani_rumble = 0; //
 
 ani_messageShift = 0; // this is used when a new message is added to the chain to allow the message to slide in.
@@ -47,6 +47,8 @@ keyCode[6] = ord("P");
 keyCode[7] = ord("Y");
 keyCode[8] = ord("U");
 keyCode[9] = ord("L");
+
+lastKeyPressed = 0;
 
 responseKey[0]=0;
 responseKey[1]=1;
@@ -88,3 +90,4 @@ textHistory = PhoneAddMessage(textHistory,true,"What do you do on any given sund
 textHistory = PhoneAddMessage(textHistory,false,"Let me tell you a long and pointless story about my amazing pet dog whom i very much love. and you should definitiely care about this dog for some reason.");
 textHistory = PhoneAddMessage(textHistory,true,"Im a spy.");
 textHistory = PhoneAddMessage(textHistory,true,"shit");
+
