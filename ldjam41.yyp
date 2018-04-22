@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "000e32c5-f055-423f-9720-ab5ee44514ca",
+            "Value": {
+                "id": "18d55703-04cf-4e00-876f-3a7bc80fba36",
+                "resourcePath": "sprites\\spr_messageHer\\spr_messageHer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "033ba590-a286-4442-b194-b14d4e14b765",
             "Value": {
                 "id": "2adf944a-ecd5-44ec-b1e0-fe527820868b",
@@ -119,6 +127,14 @@
             }
         },
         {
+            "Key": "199cd1c1-bde2-4c87-98ae-96ae151b5550",
+            "Value": {
+                "id": "bf9e0ad6-66ff-44b7-b3e3-4b0127a25a21",
+                "resourcePath": "fonts\\fnt_phoneTextMessage\\fnt_phoneTextMessage.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "1d4370d4-46e0-4f58-a5bb-f7fc3414b868",
             "Value": {
                 "id": "e17dda76-1a12-4d19-b7f4-d7ac23cbf851",
@@ -204,6 +220,14 @@
                 "id": "aa93c804-f984-4581-aa94-ec0617a9e725",
                 "resourcePath": "scripts\\PlayerDeath\\PlayerDeath.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "30f3329a-ca0d-4191-9266-57b25b64bd72",
+            "Value": {
+                "id": "450ea64d-473c-4f3b-92ed-9e1060d29602",
+                "resourcePath": "sprites\\spr_phoneBackground\\spr_phoneBackground.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -364,6 +388,14 @@
                 "id": "1daf34b9-9a61-40db-a9c2-7fa6c63eee38",
                 "resourcePath": "views\\59155de0-d59e-479d-ba74-1d2c45fe0bff.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5b9b07f1-c0c5-4433-8c3d-99a220b165ae",
+            "Value": {
+                "id": "bef03b6f-ac73-4bef-b1cc-1a315e395364",
+                "resourcePath": "scripts\\PhoneDrawMessageBox\\PhoneDrawMessageBox.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -559,6 +591,14 @@
             }
         },
         {
+            "Key": "8b475f7b-82b2-48cb-b972-934af2aafa3d",
+            "Value": {
+                "id": "08e0ef10-705c-4be6-9451-53cbcab92585",
+                "resourcePath": "views\\8b475f7b-82b2-48cb-b972-934af2aafa3d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8dc1b7b7-a0dc-4f68-8bb0-1e401ae7cde1",
             "Value": {
                 "id": "65117c8e-08be-40d7-8830-9818cefca192",
@@ -583,6 +623,30 @@
             }
         },
         {
+            "Key": "8fd3dc87-e970-458b-a37d-93ac5997a1ef",
+            "Value": {
+                "id": "8c7f6d3e-7436-4bbc-b176-380060dc85fd",
+                "resourcePath": "fonts\\fnt_phoneNametag\\fnt_phoneNametag.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "950a4878-625a-4737-8013-fa142a700189",
+            "Value": {
+                "id": "9694dc73-e842-4a73-ae0f-8c788c5b9d86",
+                "resourcePath": "views\\950a4878-625a-4737-8013-fa142a700189.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "99b553c3-7e5f-44d7-9a0a-d2ff87e89adb",
+            "Value": {
+                "id": "9050f461-330a-410b-84a5-1a3a515d3322",
+                "resourcePath": "sprites\\spr_replyWrong\\spr_replyWrong.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "99bfd35c-b182-4f61-826b-6b803bc273d0",
             "Value": {
                 "id": "1a0e0a38-afc7-4744-a5db-7a3393941d8d",
@@ -604,6 +668,14 @@
                 "id": "670b7970-8584-40c3-87de-498badcc25c5",
                 "resourcePath": "views\\a035eb9e-c63d-4ef2-be0d-bda83b53f14a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a1227480-7323-4791-82e7-f72d8c1cce24",
+            "Value": {
+                "id": "27493ff3-f38d-4098-b1e4-0a2fb253d1fc",
+                "resourcePath": "sprites\\spr_replyKeys\\spr_replyKeys.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -639,11 +711,27 @@
             }
         },
         {
+            "Key": "b20e3aff-983d-4cb3-964a-53f29ff4a129",
+            "Value": {
+                "id": "a99ade84-62e0-403f-a6e4-3085a3f9109b",
+                "resourcePath": "scripts\\PhoneDrawTextMessage\\PhoneDrawTextMessage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b30f51c8-4872-4765-954f-6afec4fa9f70",
             "Value": {
                 "id": "3b4c1ff4-9af2-4b17-a301-cceb79e785e1",
                 "resourcePath": "views\\b30f51c8-4872-4765-954f-6afec4fa9f70.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b392ddec-9055-4f81-998a-ca7bb1499698",
+            "Value": {
+                "id": "84a557bc-25d5-4baa-95da-2c780f10120a",
+                "resourcePath": "scripts\\GetMessageEvent\\GetMessageEvent.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -687,6 +775,14 @@
             }
         },
         {
+            "Key": "bf42fe07-2a9d-4579-b90c-f0fe31f266d7",
+            "Value": {
+                "id": "8b66457d-567c-4500-8399-4a7573848a8e",
+                "resourcePath": "scripts\\newMessage\\newMessage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c1fdee97-9a8a-4443-9ab0-f85037fe700e",
             "Value": {
                 "id": "5248bb30-105f-42f8-b155-d2a9d1e3fb88",
@@ -716,6 +812,14 @@
                 "id": "3a9d8338-b9eb-4ef7-b524-c5cb4a89be95",
                 "resourcePath": "objects\\Input\\Input.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c6cf8c10-c6c3-46d5-a1aa-d1ce6ed4f796",
+            "Value": {
+                "id": "3bdf7e69-81e7-4699-93b3-ef523eb3ffc2",
+                "resourcePath": "sprites\\spr_response\\spr_response.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -751,11 +855,27 @@
             }
         },
         {
+            "Key": "cd3f9a9d-83ec-4399-9c8f-426168cb2df8",
+            "Value": {
+                "id": "a4db0f8f-f023-4692-8580-f075490cbac6",
+                "resourcePath": "sprites\\spr_messageHim\\spr_messageHim.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d060a7ea-153e-4cc3-a0cf-630dd098779c",
             "Value": {
                 "id": "501a6a0d-dd06-431b-8e2c-1763d8a8935a",
                 "resourcePath": "views\\d060a7ea-153e-4cc3-a0cf-630dd098779c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d21e12b9-ccee-45d0-882c-b9788623e828",
+            "Value": {
+                "id": "e464d021-012a-4d8e-8bf2-a6b1eefc2b3a",
+                "resourcePath": "scripts\\PhoneDrawResponse\\PhoneDrawResponse.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -925,6 +1045,14 @@
                 "resourcePath": "rooms\\m_main\\m_main.yy",
                 "resourceType": "GMRoom"
             }
+        },
+        {
+            "Key": "fc91e9c5-d8e6-469c-80fb-c1e6db2e6416",
+            "Value": {
+                "id": "2ba0685d-ea12-4198-879f-d966f755d683",
+                "resourcePath": "scripts\\PhoneAddMessage\\PhoneAddMessage.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -948,7 +1076,13 @@
         "c1fdee97-9a8a-4443-9ab0-f85037fe700e",
         "3f58cdef-d666-4237-b715-e59f1ae79e27",
         "c70f80c2-8617-42b1-a23e-a67b3277111c",
-        "a3819678-5e36-471f-b47a-5eeaed40c2ca"
+        "a3819678-5e36-471f-b47a-5eeaed40c2ca",
+        "b20e3aff-983d-4cb3-964a-53f29ff4a129",
+        "5b9b07f1-c0c5-4433-8c3d-99a220b165ae",
+        "fc91e9c5-d8e6-469c-80fb-c1e6db2e6416",
+        "bf42fe07-2a9d-4579-b90c-f0fe31f266d7",
+        "d21e12b9-ccee-45d0-882c-b9788623e828",
+        "b392ddec-9055-4f81-998a-ca7bb1499698"
     ],
     "tutorial": ""
 }
