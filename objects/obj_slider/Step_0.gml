@@ -24,9 +24,15 @@ if (focus || mouseOn) {
 		switch(target) {
 			case "masterV":
 				Sound.masterV = value;
+				if audio_is_playing(Sound.menuMusic) {
+					audio_sound_gain(Sound.menuMusic,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,0);
+				}
 			break;
 			case "musicV":
 				Sound.musicV = value;
+				if audio_is_playing(Sound.menuMusic) {
+					audio_sound_gain(Sound.menuMusic,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,0);
+				}
 			break;
 			case "sfxV":
 				Sound.sfxV = value;

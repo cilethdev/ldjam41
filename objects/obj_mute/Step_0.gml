@@ -27,5 +27,8 @@ if (focus || mouseOn) {
 		ini_write_real("settings","mute",mute);
 		ini_close();
 		Sound.mute = mute;
+		if audio_is_playing(Sound.menuMusic) {
+			audio_sound_gain(Sound.menuMusic,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,0);
+		}
 	}
 }

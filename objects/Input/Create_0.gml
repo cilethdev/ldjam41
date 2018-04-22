@@ -23,6 +23,8 @@ attack2	= ord("X");
 throw1	= ord("Z");
 throw2	= ord("Z");
 
+reload  = ord("R");
+
 //Directions
 kleft	= 0;
 kRight	= 0;
@@ -41,6 +43,7 @@ kJumpR  = 0;
 
 kDash	= 0;
 kAttack = 0;
+kReload	= 0;
 
 //Mouse
 mLeft   = 0;

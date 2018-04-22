@@ -1,5 +1,5 @@
 /// @description 
-
+display_set_gui_size(960,540);
 
 //Initialze singletons
 instance_create_layer(0,0,"Instances",Input);

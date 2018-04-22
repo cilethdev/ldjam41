@@ -1,9 +1,9 @@
 /// @description 
 rm		= -1;
 fadeT	= 60;
-colour  = make_colour_hsv(30,255,255);
+colour  = c_black;
 hold	= 30;
-points  = 4;
+points  = 12;
 shapeA	= 0;
 spin	= true;
 spinAmt = 3;
