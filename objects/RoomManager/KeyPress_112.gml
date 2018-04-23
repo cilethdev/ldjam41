@@ -1,4 +1,5 @@
-/// @description 
+/// @description
+exit;
 showRoomList = !showRoomList;
 if showRoomList {
 		listPos = room;

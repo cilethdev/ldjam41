@@ -4,6 +4,8 @@ alpha = 0;
 guiw	= display_get_gui_width();
 guih	= display_get_gui_height();
 
+PlaySound(snd_phoneNegative,1,0,1);
+
 // The number of values affected by springing
 _springValues = 2;
 

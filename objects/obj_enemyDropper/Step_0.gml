@@ -1,5 +1,5 @@
 /// @description 
-
+vxMax = (hasDropped)? 10 : 7;
 // Inherit the parent event
 event_inherited();
 
@@ -12,21 +12,27 @@ if (hp <= 0) {
 
 //Facing
 if (instance_exists(obj_player)) {
-	facing = (obj_player.x > x)? 1 : -1;
+	if(player == undefined){
+		player = instance_find(obj_player,0);
+	}
+	var distanceToPlayer = distance_to_object(player);
+	var playerx = player.x;
+	var playery = player.y;
+	facing = (playerx > x)? 1 : -1;
 	if (!hasDropped) {
 		vy = 0;
-		if (abs(obj_player.x - x) < dropRange) {
+		if (abs(playerx - x) < dropRange) {
 			hasDropped = true;
 		}
 	}
 	
 	//Attack
-	var los = collision_line(x,y-14,obj_player.x,obj_player.y-14,obj_solid,-1,1);
-	if (distance_to_object(obj_player) < range && canFire && !los) {
+	var los = collision_line(x,y-14,playerx,playery-14,obj_solid,-1,1);
+	if (distanceToPlayer < range && canFire && !los) {
 		if (shootDelay && onGround) shootDelay--;
 	}
 	
-	if (distance_to_object(obj_player) < range && canFire && !los && !shootDelay && onGround) {
+	if (distanceToPlayer < range && canFire && !los && !shootDelay && onGround) {
 		canFire = false;
 		fireCD  = fireRate+irandom_range(-30,30);
 		var bullet = instance_create_depth(x,y-14,depth-1,obj_bullet);
@@ -40,7 +46,7 @@ if (instance_exists(obj_player)) {
 		PlaySound(snd_pistol,pitch,0,1);
 	}
 	
-	if (distance_to_object(obj_player) > range) {
+	if (distanceToPlayer > range) {
 		alerted = false;
 		shootDelay = 60;
 	}

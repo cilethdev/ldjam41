@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+landed = false;
 
 hp   = 3;
 team = 1;
@@ -23,3 +24,5 @@ weapon = spr_enemy2Rifle;
 
 hasDropped = false;
 dropRange = 256;
+
+player = undefined;

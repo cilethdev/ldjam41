@@ -24,3 +24,5 @@ wpnAngle = 0;
 IDLE = 0;
 ATTACK = 1;
 state = IDLE;
+
+player = undefined;

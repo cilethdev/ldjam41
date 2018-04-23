@@ -23,8 +23,8 @@ x= idealx;
 y= idealy;
 
 timeText = 1;
-timeEndOfEvent = 15;
-timeToResponse = 10;
+timeEndOfEvent = 30;
+timeToResponse = 20;
 
 //these numbers were all just gotten by measuring spr_phoneBackground.
 screenPaddingSide =  9;

@@ -1,2 +1,3 @@
-/// @description 
+/// @description
+exit;
 showSoundSettings = !showSoundSettings;

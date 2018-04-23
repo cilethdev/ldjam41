@@ -24,7 +24,7 @@ if (!dashing) {
 	}
 }
 
-if (!wallJumpT) {
+if (!wallJumpT && !dashing) {
 	if (Input.kLeft) {
 		if (onGround && !dashing) {
 			animationState = RUN;
@@ -127,6 +127,13 @@ if (Input.kJumpP && !dashing) {
 		}
 		jNum = 1;
 		if (slide) slide = 2;
+		
+		
+		//Dust
+		repeat(irandom_range(2,3)) {
+			var dust = instance_create_depth(x-(8*sign(facing)),y+random_range(0,-2),depth-10,obj_dust);
+			dust.image_angle = choose(0,90,180,270);
+		}
 	} else
 	if (jNum < jMax && onGround) {
 		jNum++;
@@ -139,6 +146,12 @@ if (Input.kJumpP && !dashing) {
 		//vfx
 		xscale = 0.5;
 		yscale = 1.5;
+		
+		//Dust
+		repeat(irandom_range(2,3)) {
+			var dust = instance_create_depth(x-(8*sign(vx)),y+random_range(0,-2),depth-10,obj_dust);
+			dust.image_angle = choose(0,90,180,270);
+		}
 	
 	}
 }
@@ -161,7 +174,15 @@ if (Input.kDash && canDash && onGround) {
 	dashing = true;
 	dashT	= 20;
 	dashDir = GetDashDir();
+	animationState = ROLL;
+	image_index = 0;
 	
+	//Dust
+	repeat(irandom_range(2,3)) {
+		var dust = instance_create_depth(x-(8*sign(vx)),y+random_range(0,-2),depth-10,obj_dust);
+		dust.image_angle = choose(0,90,180,270);
+	}
+
 	//SFX
 	PlaySound(snd_jump,1.1,0,0.8);
 }	
@@ -169,23 +190,23 @@ if (dashing) {
 	SetDashVelocity();
 	animationState = ROLL;
 	
-	if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
-		vx = 0;
-	}
+	//if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
+	//	vx = 0;
+	//}
 	
 	if (dashT > 0) dashT--;
 	if (dashT == 0 || !onGround) {
 		dashT = -1;
 		dashing = false;
-		if (dashDir == 0 && place_meeting(x+(32*facing),y+1,obj_solid)) {
+		if (dashDir == 0) { // && place_meeting(x+(32*facing),y+1,obj_solid)) {
 			vx = 6;
 		} else
-		if (dashDir = 180 && place_meeting(x+(32*facing),y+1,obj_solid)) {
+		if (dashDir = 180) { //&& place_meeting(x+(32*facing),y+1,obj_solid)) {
 			vx = -6;
 		}
-		if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
-		vx = 0;
-	}
+		//if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
+		//	vx = 0;
+		//}
 	}
 }
 
@@ -342,8 +363,8 @@ if (keyboard_check_pressed(ord("5")) && weapon != weapons.rockets) {
 	}
 }
 
-if (mouse_wheel_up()) {
-	var nextWeapon = (weapon+1) mod 5;
+if (mouse_wheel_down()) {
+	var nextWeapon = NextUnlockedWeapon();
 	if (wpnUnlocked[nextWeapon] == true) {
 		weapon = nextWeapon;
 		ammo = wpn[weapon,weaponProperties.ammoClip];
@@ -353,13 +374,8 @@ if (mouse_wheel_up()) {
 	}
 }
 
-if (mouse_wheel_down()) {
-	var nextWeapon;
-	if weapon - 1 < 0 {
-		nextWeapon = 4;
-	} else {
-		nextWeapon = weapon-1;
-	}
+if (mouse_wheel_up()) {
+	var nextWeapon = PrevUnlockedWeapon();
 	if (wpnUnlocked[nextWeapon] == true) {
 		weapon = nextWeapon;
 		ammo = wpn[weapon,weaponProperties.ammoClip];

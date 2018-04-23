@@ -10,4 +10,9 @@
 //4 the correct message chain
 //5 the medium message chain
 //6 the wrong message chain.
+
+
+//SFX
+PlaySound(snd_phoneNotification,1,0,1);
+
 return argument0[irandom(array_length_1d(argument0)-1)];

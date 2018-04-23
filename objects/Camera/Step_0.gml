@@ -37,7 +37,7 @@ if !instance_exists(obj_player) {
 	posy = y-camh/2;
 	
 	posx = clamp(posx,0,room_width-camw);
-	posy = clamp(posy,y-camh/2,room_height-camh);
+	posy = clamp(posy,0,room_height-camh);
 	
 	camera_set_view_pos(cam,posx+shake,posy+shake);
 }

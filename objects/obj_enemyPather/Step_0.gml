@@ -10,7 +10,14 @@ if (hp <= 0) {
 
 //Facing
 if (instance_exists(obj_player)) {
-	var los = !collision_line(x,y-14,obj_player.x,obj_player.y-14,obj_solid,-1,1);
+	if(player == undefined){
+		player = instance_find(obj_player,0);
+	}
+	var distanceToPlayer = distance_to_object(player);
+	var playerx = player.x;
+	var playery = player.y;
+	
+	var los = !collision_line(x,y-14,playerx,playery-14,obj_solid,-1,1);
 	//Path
 	switch(state) {
 		case IDLE:
@@ -30,7 +37,7 @@ if (instance_exists(obj_player)) {
 					break;
 				}
 			}
-			if (distance_to_object(obj_player) < range && canFire && los) {
+			if (distanceToPlayer < range && canFire && los) {
 				state = ATTACK;
 				idleT = -1;
 				
@@ -65,7 +72,7 @@ if (instance_exists(obj_player)) {
 				facing *= -1;
 			}
 			
-			if (distance_to_object(obj_player) < range && canFire && los) {
+			if (distanceToPlayer < range && canFire && los) {
 				state = ATTACK;
 				idleT = -1;
 				
@@ -78,10 +85,10 @@ if (instance_exists(obj_player)) {
 			sprite_index = spr_enemy2Idle;
 			if (shootDelay) shootDelay--;
 			
-			facing = (obj_player.x > x)? 1 : -1;
+			facing = (playerx > x)? 1 : -1;
 			
 			//Attack
-			if (distance_to_object(obj_player) < range && canFire && los && !shootDelay) {
+			if (distanceToPlayer < range && canFire && los && !shootDelay) {
 				state = ATTACK;
 				
 				canFire = false;
@@ -107,7 +114,7 @@ if (instance_exists(obj_player)) {
 			} else {
 				deAggroT = 0;
 			}
-			if (distance_to_object(obj_player) > deAggroRange) {
+			if (distanceToPlayer > deAggroRange) {
 				state = IDLE;
 				deAggroT = 0;
 				shootDelay = 60;

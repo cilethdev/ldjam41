@@ -1,4 +1,12 @@
 /// @description
+//ROPE
+var dis = y;
+for(i=0;i<(dis+64)div 32;i++) {
+	if !place_meeting(x,(i*32)+64,obj_solid) {
+		draw_sprite(spr_rope,0,x,i*32);
+	}
+}
+
 if (!onGround) {
 	sprite_index = spr_enemy3Fall;
 } else {

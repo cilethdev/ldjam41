@@ -21,3 +21,4 @@ canFire = true;
 weapon = spr_enemy1Weapon;
 
 alerted = false;
+player = undefined;

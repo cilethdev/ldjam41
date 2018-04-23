@@ -29,3 +29,5 @@ state = IDLE;
 
 idleT = 120;
 pathT = -1;
+
+player = undefined;
