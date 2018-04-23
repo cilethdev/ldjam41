@@ -45,4 +45,12 @@ switch(room) {
 			audio_sound_gain(music_rainDown,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,3000);
 		}
 	break;
+	case rm_ending:
+		if !audio_is_playing(music_iNeedAWife) {
+			audio_stop_all();
+			audio_play_sound(music_iNeedAWife,0,0);
+			audio_sound_gain(music_iNeedAWife,0,0);
+			audio_sound_gain(music_iNeedAWife,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,3000);
+		}
+	break;
 }

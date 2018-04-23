@@ -1791,6 +1791,14 @@
             }
         },
         {
+            "Key": "9d14f405-1535-4565-8894-9152d3a279c0",
+            "Value": {
+                "id": "6680050e-0bf5-4606-8bff-8dfb90a16135",
+                "resourcePath": "sounds\\music_iNeedAWife\\music_iNeedAWife.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "9f19a5bd-1ef3-46f8-851f-ab5dc45908e0",
             "Value": {
                 "id": "631d72b0-8910-4462-9c7d-958efc163c74",
