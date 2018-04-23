@@ -403,5 +403,148 @@ event[6] = PhoneAddMessage(event[6],her,	"I don't get bored.");
 event[6] = PhoneAddMessage(event[6],him,	"Okay, I don't think I believe you.");
 output[i++] = event;
 
+// 
+event = array_create(7);
+event[0] = "Have you ever been to Canada?";
+//responses
+event[1] = "Nope";
+event[2] = "Not sure";
+event[3] = "Yup";
+//positive chain
+event[4] = PhoneAddMessage(event[4],him,	"Nope.");
+event[4] = PhoneAddMessage(event[4],him,	"Never really had the chance");
+//meh chain
+event[5] = PhoneAddMessage(event[5],him,	"I am not entirely sure");
+event[5] = PhoneAddMessage(event[5],her,	"What, there has to be a story there?");
+event[5] = PhoneAddMessage(event[5],him,	"haha, there is, but maybe another time.");
+//bad chain
+event[6] = PhoneAddMessage(event[6],him,	"I went once.");
+event[6] = PhoneAddMessage(event[6],her,	"I'm not allowed the border anymore XP");
+event[6] = PhoneAddMessage(event[6],her,	"#@$%");
+event[6] = PhoneAddMessage(event[6],her,	"What'd you do?");
+event[6] = PhoneAddMessage(event[6],him,	"It's more about what I DIDN'T do.");
+output[i++] = event;
+
+// 
+event = array_create(7);
+event[0] = "What's your biggest secret?";
+//responses
+event[1] = "Can't tell :3";
+event[2] = "Can't tell ;)";
+event[3] = "Can't tell :|";
+//positive chain
+event[4] = PhoneAddMessage(event[4],him,	"If I told you I'd have to kill you :3");
+event[4] = PhoneAddMessage(event[4],her,	"hahaha ok, maybe a bit early for that.");
+//meh chain
+event[5] = PhoneAddMessage(event[5],him,	"If I told you I'd have to kill you ;)");
+event[5] = PhoneAddMessage(event[5],her,	"lol, tell me!");
+event[5] = PhoneAddMessage(event[5],him,	"Sorry I can't");
+event[5] = PhoneAddMessage(event[5],him,	"Tell me!!");
+event[5] = PhoneAddMessage(event[5],him,	"`\_('w')_/`");
+//bad chain
+event[6] = PhoneAddMessage(event[6],him,	"If I told you I'd have to kill you :|");
+event[6] = PhoneAddMessage(event[6],her,	"uhhh");
+event[6] = PhoneAddMessage(event[6],her,	"okaay");
+output[i++] = event;
+
+//
+event = array_create(7);
+event[0] = "Sometimes I find myself looking at the clouds and doing pointless math in my head.  Do you ever do that?";
+//responses
+event[1] = "It has happened";
+event[2] = "All the time";
+event[3] = "That's weird";
+//positive chain
+event[4] = PhoneAddMessage(event[4],him,	"I have found myself dreaming about numbers on a rare occasion.");
+event[4] = PhoneAddMessage(event[4],him,	"What kind of problems do you do?");
+event[4] = PhoneAddMessage(event[4],her,	"I often find it relaxing to attempt to imagine the cloud I'm looking at, but with a 4th dimension.");
+event[4] = PhoneAddMessage(event[4],him,	"Kinda like a tesseract?");
+event[4] = PhoneAddMessage(event[4],her,	"yeah");
+//meh chain
+event[5] = PhoneAddMessage(event[5],him,	"Yeah I practice addition in my head all the time!");
+event[5] = PhoneAddMessage(event[5],her,	"Addition, huh?");
+event[5] = PhoneAddMessage(event[5],him,	"Yeah, I once found I couldn't add change, got embarassed and thouhgt");
+event[5] = PhoneAddMessage(event[5],him,	"never again");
+event[5] = PhoneAddMessage(event[5],her,	"haha that would be embarassing");
+//bad chain
+event[6] = PhoneAddMessage(event[6],him,	"That's really weird");
+event[6] = PhoneAddMessage(event[6],him,	"How often does this happen?");
+event[6] = PhoneAddMessage(event[6],her,	"HARDLY AT ALL!");
+output[i++] = event;
+
+event = array_create(7);
+event[0] = "What's your favorite apple?";
+//responses
+event[1] = "Fuji";
+event[2] = "Granny Smith";
+event[3] = "Red Delicious";
+//positive chain
+event[4] = PhoneAddMessage(event[4],him,	"Fuji apples are clearly the best");
+event[4] = PhoneAddMessage(event[4],her,	"Thank you!");
+event[4] = PhoneAddMessage(event[4],him,	"It disturbs me that this isn't common knowledge to some");
+event[4] = PhoneAddMessage(event[4],her,	"<3");
+//meh chain
+event[5] = PhoneAddMessage(event[5],him,	"I like Granny Smith apples");
+event[5] = PhoneAddMessage(event[5],her,	"Are you a masochist?");
+event[5] = PhoneAddMessage(event[5],her,	"Those are sour as hell");
+event[5] = PhoneAddMessage(event[5],him,	"They're what I always had as a kid, and seem to have grown to like them.");
+event[5] = PhoneAddMessage(event[5],her,	"crazy");
+//bad chain
+event[6] = PhoneAddMessage(event[6],him,	"Red Delicious are the best!");
+event[6] = PhoneAddMessage(event[6],her,	"uh...no");
+event[6] = PhoneAddMessage(event[6],her,	"what");
+event[6] = PhoneAddMessage(event[6],her,	"is");
+event[6] = PhoneAddMessage(event[6],her,	"WRONG");
+event[6] = PhoneAddMessage(event[6],her,	"with you!?");
+output[i++] = event;
+
+event = array_create(7);
+event[0] = "Imagine there are 3 doors.  Behind 1, there is a car.  Behind the others, are goats.  After selecting a door, one of the other doors is opened to reveal a goat. You are then allowed to change your decision between the 2 remaining doors.  Do you switch or stay?";
+//responses
+event[1] = "Switch";
+event[2] = "I want a goat";
+event[3] = "Stay";
+//positive chain
+event[4] = PhoneAddMessage(event[4],him,	"I switch");
+event[4] = PhoneAddMessage(event[4],her,	"Yup.");
+event[4] = PhoneAddMessage(event[4],her,	"You have a higher chance of getting the car if you switch");
+event[4] = PhoneAddMessage(event[4],him,	"Probability is pretty interesting");
+event[4] = PhoneAddMessage(event[4],her,	"I use a bit of probability theory when we need to find a bear");
+event[4] = PhoneAddMessage(event[4],him,	"\"the bear will probably be in the forest\";)");
+event[4] = PhoneAddMessage(event[4],her,	"lol");
+//meh chain
+event[5] = PhoneAddMessage(event[5],him,	"I will stay because I want a goat lol");
+event[5] = PhoneAddMessage(event[5],her,	"Here I thought there were only 2 answers to this question");
+//bad chain
+event[6] = PhoneAddMessage(event[6],him,	"I stay");
+event[6] = PhoneAddMessage(event[6],him,	"revealing a goat is just a trap.");
+event[6] = PhoneAddMessage(event[6],her,	"WRONG");
+event[6] = PhoneAddMessage(event[6],her,	"by staying you have less chance to get a car");
+event[6] = PhoneAddMessage(event[6],him,	"lol whatever");
+event[6] = PhoneAddMessage(event[6],him,	"I'm not joking :(");
+output[i++] = event;
+
+event = array_create(7);
+event[0] = "You said that you read.  When Alice goes through the looking glass, is the Queen a playing card or a chess piece?";
+//responses
+event[1] = "A chess piece";
+event[2] = "A playing card";
+event[3] = "Not that trash";
+//positive chain
+event[4] = PhoneAddMessage(event[4],him,	"The queen through the looking glass is a chess piece");
+event[4] = PhoneAddMessage(event[4],him,	"I do like Lewis Carroll");
+event[4] = PhoneAddMessage(event[4],her,	"Yeah me too, there always a fun sheen to the textures he paints.");
+event[4] = PhoneAddMessage(event[4],her,	"if that makes sense X)");
+event[4] = PhoneAddMessage(event[4],him,	"I think it does");
+//meh chain
+event[5] = PhoneAddMessage(event[5],him,	"I think the queen was a playing card");
+event[5] = PhoneAddMessage(event[5],him,	"kept trying to lop heads");
+event[5] = PhoneAddMessage(event[5],her,	"nah that was the first one.");
+event[5] = PhoneAddMessage(event[5],her,	"In through the looking glass, the queen is a chess piece.");
+//bad chain
+event[6] = PhoneAddMessage(event[6],him,	"I don't read trippy trash like that");
+event[6] = PhoneAddMessage(event[6],her,	"ow :/");
+output[i++] = event;
+
 //done 
 return output;
