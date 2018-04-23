@@ -34,8 +34,9 @@ if (instance_exists(obj_player)) {
 				state = ATTACK;
 				idleT = -1;
 				
-				//VFX
-				instance_create_depth(x,y-42,depth-10,obj_alert);
+				//Alert
+				var alert = instance_create_depth(x,y-42,depth-10,obj_alert);
+				alert.owner = id;
 			}
 		break;
 		case PATH:
@@ -69,7 +70,8 @@ if (instance_exists(obj_player)) {
 				idleT = -1;
 				
 				//Alert
-				instance_create_depth(x,y-42,depth-10,obj_alert);
+				var alert = instance_create_depth(x,y-42,depth-10,obj_alert);
+				alert.owner = id;
 			}
 		break;
 		case ATTACK:
@@ -89,6 +91,10 @@ if (instance_exists(obj_player)) {
 				bullet.dir = (facing == 1)? 0 : 180;
 				bullet.image_angle =(facing == 1)? 0 : 180;
 				bullet.team = team;
+				
+				//SFX
+				var pitch = random_range(0.95,1);
+				PlaySound(snd_rifle,pitch,0,1);
 			}
 			if (!los) {
 				deAggroT++;

@@ -3,7 +3,7 @@ draw_sprite_ext(sprite_index,image_index,x,y,xscale*facing,yscale,image_angle,im
 
 
 //weapon
-if weapon != -1 {
+if (weapon != -1 && !dashing && !onWall) {
 	flip = (mouse_x > x)? 1 : -1;
 	var dirxoff,diryoff;
 	dirxoff = lengthdir_x(wpn[weapon,weaponProperties.offset],wpnAngle);

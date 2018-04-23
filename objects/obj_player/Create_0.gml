@@ -1,6 +1,7 @@
 /// @description 
 event_inherited();
 instance_create_layer(x,y,"Reticle",Reticle);
+
 canMove = true;
 vx		= 0;
 vxMax	= 4;
@@ -50,10 +51,11 @@ facing = 1;
 landed = false;
 xscale = 1;
 yscale = 1;
-IDLE = 0;
-RUN  = 1;
-JUMP = 2;
-ONWALL = 3;
+IDLE	= 0;
+RUN		= 1;
+JUMP	= 2;
+ONWALL	= 3;
+ROLL	= 4;
 animationState = IDLE;
 
 //Sound
@@ -68,7 +70,14 @@ hp = 5;
 
 //Weapon
 init_weapons();
-weapon		= weapons.pistol;
+weapon	= weapons.rifle;
+wpnUnlocked[weapons.pistol]		= true;
+wpnUnlocked[weapons.rifle]		= true;
+wpnUnlocked[weapons.shotgun]	= true;
+wpnUnlocked[weapons.sniper]		= true;
+wpnUnlocked[weapons.rockets]	= true;
+
+
 flip		= 1;
 wpnYOff		= 12;
 wpnXScale	= 1;
@@ -80,6 +89,7 @@ team		= 0;
 canFire		= true;
 fireRate	= wpn[weapon,weaponProperties.fireRate];
 fireCD		= -1;
+weaponSwitch = false;
 
 //Reloading
 ammo		= wpn[weapon,weaponProperties.ammoClip];

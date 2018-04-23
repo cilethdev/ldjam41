@@ -1,5 +1,6 @@
 /// @description 
-instance_create_depth(x,y,-1000,obj_explosion);
+var expl = instance_create_depth(x,y,-1000,obj_explosion);
+	expl.team = team;
 if instance_exists(obj_player) {
 	if distance_to_object(obj_player) < 640  {
 		Camera.shake = 15;

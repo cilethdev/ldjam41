@@ -1,5 +1,5 @@
 /// @description 
-if (other.team != team) {
+if (other.team != team && !dashing) {
 	with(other) { 
 		instance_destroy();
 	}
@@ -8,5 +8,6 @@ if (other.team != team) {
 	//SFX
 	
 	//VFX
+	Camera.shake = 8;
 	
 }
