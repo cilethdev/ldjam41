@@ -54,7 +54,7 @@ wpn[weapons.shotgun,weaponProperties.cameraShake]	= 4;
 
 //Sniper
 wpn[weapons.sniper,weaponProperties.object]			= obj_bullet;
-wpn[weapons.sniper,weaponProperties.sprite]			= spr_rifle;
+wpn[weapons.sniper,weaponProperties.sprite]			= spr_sniper;
 wpn[weapons.sniper,weaponProperties.offset]			= 6;
 wpn[weapons.sniper,weaponProperties.barrelOffset]	= 25;
 wpn[weapons.sniper,weaponProperties.ammoClip]		= 1;
@@ -73,7 +73,7 @@ wpn[weapons.sniper,weaponProperties.cameraShake]	= 10;
 //Rocket
 wpn[weapons.rockets,weaponProperties.object]		= obj_rocket;
 wpn[weapons.rockets,weaponProperties.sprite]		= spr_rocketLauncher;
-wpn[weapons.rockets,weaponProperties.offset]		= 12;
+wpn[weapons.rockets,weaponProperties.offset]		= 8;
 wpn[weapons.rockets,weaponProperties.barrelOffset]	= 16;
 wpn[weapons.rockets,weaponProperties.ammoClip]		= 1;
 wpn[weapons.rockets,weaponProperties.fireRate]		= 0;

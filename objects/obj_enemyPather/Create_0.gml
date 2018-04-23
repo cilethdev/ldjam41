@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp   = 4;
+hp   = 3;
 team = 1;
 
 //Visuals
@@ -15,7 +15,7 @@ yscale	= 1;
 shootDelay = 60;
 range = 320;
 deAggroRange = 480;
-fireRate = 1*room_speed;
+fireRate = 90;
 fireCD	= -1;
 canFire = true;
 deAggroT = 0;

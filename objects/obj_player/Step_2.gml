@@ -13,7 +13,9 @@ if hp <= 0 {
 }
 
 #region Animation control
-facing = (x < mouse_x)? 1 : -1;
+if (!dashing && !onWall) {
+	facing = (x < mouse_x)? 1 : -1;
+}
 
 xscale = Approach(xscale,1,0.05);
 yscale = Approach(yscale,1,0.05);
@@ -25,7 +27,13 @@ wpnYScale = Approach(wpnYScale,1,0.04);
 if (!onGround) {
 	if (!onWall) {
 		animationState = JUMP;
+	} else {
+		animationState = ONWALL;
 	}
+}
+
+if (dashing) {
+	animationState = ROLL;
 }
 
 switch(animationState) {
@@ -60,6 +68,17 @@ switch(animationState) {
 		if !onWall {
 			sprite_index = (vy < 0)? spr_playerJump : spr_playerFall;
 		}
+	break;
+	case ONWALL:
+			sprite_index = spr_playerSlide;
+		if (cLeft) {
+			facing = -1;
+		} else {
+			facing = 1;
+		}
+	break;
+	case ROLL:
+		sprite_index = spr_playerRoll;
 	break;
 }
 

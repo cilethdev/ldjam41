@@ -26,7 +26,7 @@ if (!dashing) {
 
 if (!wallJumpT) {
 	if (Input.kLeft) {
-		if (onGround) {
+		if (onGround && !dashing) {
 			animationState = RUN;
 		}
 		if (!onWall) {
@@ -51,7 +51,7 @@ if (!wallJumpT) {
 	}
 
 	if (Input.kRight) {
-		if (onGround) {
+		if (onGround && !dashing) {
 			animationState = RUN;
 		}
 		if (!onWall) {
@@ -78,7 +78,7 @@ if (!wallJumpT) {
 
 if (!Input.kLeft && !Input.kRight && !dashing && !slide && !wallJumpT) {
 	vx = Approach(vx,0,tempFric);
-	if (onGround) {
+	if (onGround && !dashing) {
 		animationState = IDLE;
 	}
 }
@@ -155,25 +155,37 @@ if ((place_meeting(x,y+1,obj_passThru) && !place_meeting(x,y+1,obj_solid)) && In
 	y += 1;
 }
 
-if (Input.kDash && canDash) {
+if (Input.kDash && canDash && onGround) {
 	canDash = false;
 	dashCD	= 30;
 	dashing = true;
-	dashT	= 15;
+	dashT	= 20;
 	dashDir = GetDashDir();
+	
+	//SFX
+	PlaySound(snd_jump,1.1,0,0.8);
 }	
 if (dashing) {
 	SetDashVelocity();
+	animationState = ROLL;
+	
+	if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
+		vx = 0;
+	}
+	
 	if (dashT > 0) dashT--;
-	if (dashT == 0) {
+	if (dashT == 0 || !onGround) {
 		dashT = -1;
 		dashing = false;
-		if (dashDir == 0) {
-			vx = vxMax;
+		if (dashDir == 0 && place_meeting(x+(32*facing),y+1,obj_solid)) {
+			vx = 6;
 		} else
-		if (dashDir = 180) {
-			vx = -vxMax;
+		if (dashDir = 180 && place_meeting(x+(32*facing),y+1,obj_solid)) {
+			vx = -6;
 		}
+		if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
+		vx = 0;
+	}
 	}
 }
 
@@ -199,7 +211,7 @@ wpnAngle = point_direction(x,y-wpnYOff,mouse_x,mouse_y);
 //if (attackCD) attackCD--;
 
 //Shooting
-if (Input.mLeft && canFire && (ammo > 0) && !reloading) {
+if (Input.mLeft && canFire && (ammo > 0) && !reloading && !dashing && !onWall) {
 	var ldirx,ldiry;
 	ldirx = lengthdir_x(wpn[weapon,weaponProperties.offset]+16,wpnAngle);
 	ldiry = lengthdir_y(wpn[weapon,weaponProperties.offset]+16,wpnAngle);
@@ -283,3 +295,78 @@ if (reloadT == 0) {
 
 #endregion
 
+#region weapon switching
+if (keyboard_check_pressed(ord("1")) && weapon != weapons.pistol) {
+	if (wpnUnlocked[weapons.pistol] == true) {
+		weapon = weapons.pistol;
+		ammo = wpn[weapon,weaponProperties.ammoClip];
+		fireRate = wpn[weapon,weaponProperties.fireRate];
+		canFire = false;
+		fireCD = 30;
+	}
+}
+if (keyboard_check_pressed(ord("2")) && weapon != weapons.rifle) {
+	if (wpnUnlocked[weapons.rifle] == true) {
+		weapon = weapons.rifle;
+		ammo = wpn[weapon,weaponProperties.ammoClip];
+		fireRate = wpn[weapon,weaponProperties.fireRate];
+		canFire = false;
+		fireCD = 30;
+	}
+}
+if (keyboard_check_pressed(ord("3")) && weapon != weapons.shotgun) {
+	if (wpnUnlocked[weapons.shotgun] == true) {
+		weapon = weapons.shotgun;
+		ammo = wpn[weapon,weaponProperties.ammoClip];
+		fireRate = wpn[weapon,weaponProperties.fireRate];
+		canFire = false;
+		fireCD = 30;
+	}
+}
+if (keyboard_check_pressed(ord("4")) && weapon != weapons.sniper) {
+	if (wpnUnlocked[weapons.sniper] == true) {
+		weapon = weapons.sniper;
+		ammo = wpn[weapon,weaponProperties.ammoClip];
+		fireRate = wpn[weapon,weaponProperties.fireRate];
+		canFire = false;
+		fireCD = 30;
+	}
+}
+if (keyboard_check_pressed(ord("5")) && weapon != weapons.rockets) {
+	if (wpnUnlocked[weapons.rockets] == true) {
+		weapon = weapons.rockets;
+		ammo = wpn[weapon,weaponProperties.ammoClip];
+		fireRate = wpn[weapon,weaponProperties.fireRate];
+		canFire = false;
+		fireCD = 30;
+	}
+}
+
+if (mouse_wheel_up()) {
+	var nextWeapon = (weapon+1) mod 5;
+	if (wpnUnlocked[nextWeapon] == true) {
+		weapon = nextWeapon;
+		ammo = wpn[weapon,weaponProperties.ammoClip];
+		fireRate = wpn[weapon,weaponProperties.fireRate];
+		canFire = false;
+		fireCD = 30;
+	}
+}
+
+if (mouse_wheel_down()) {
+	var nextWeapon;
+	if weapon - 1 < 0 {
+		nextWeapon = 4;
+	} else {
+		nextWeapon = weapon-1;
+	}
+	if (wpnUnlocked[nextWeapon] == true) {
+		weapon = nextWeapon;
+		ammo = wpn[weapon,weaponProperties.ammoClip];
+		fireRate = wpn[weapon,weaponProperties.fireRate];
+		canFire = false;
+		fireCD = 30;
+	}
+}
+
+#endregion
