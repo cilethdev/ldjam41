@@ -1,0 +1,35 @@
+
+var names = [];
+var i = 0;
+names[i++] = "Babrie";
+names[i++] = "Belinda";
+names[i++] = "Pam";
+names[i++] = "Bethany";
+names[i++] = "Angela";
+names[i++] = "Kyleen";
+names[i++] = "Amy";
+names[i++] = "Kate";
+names[i++] = "Jeorge";
+names[i++] = "Marge";
+names[i++] = "Susy";
+names[i++] = "Rachel";
+names[i++] = "Becky";
+names[i++] = "Samm";
+names[i++] = "Olivia";
+names[i++] = "Sophia";
+names[i++] = "Ava";
+names[i++] = "Isabella";
+names[i++] = "Mia";
+names[i++] = "Abigail";
+names[i++] = "Emily";
+names[i++] = "Emma";
+names[i++] = "Charlotte";
+names[i++] = "Harper";
+names[i++] = "Madison";
+names[i++] = "Amelia";
+names[i++] = "Evelyn";
+names[i++] = "Chloe";
+names[i++] = "Ella";
+names[i++] = "Grace";
+
+return names[irandom(array_length_1d(names)-1)];
