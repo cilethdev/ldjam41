@@ -135,14 +135,6 @@
             }
         },
         {
-            "Key": "0feeaf1a-69e4-424a-9257-128bf328f0b8",
-            "Value": {
-                "id": "a090cfe2-50e6-4453-957f-ad68af236429",
-                "resourcePath": "scripts\\PhoneSetEventAlarm\\PhoneSetEventAlarm.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "0b7dbe13-2bbf-45d1-bdb6-171bd871b939",
             "Value": {
                 "id": "3ff612dd-0192-49d6-b9d4-734500fc62ab",
@@ -164,6 +156,14 @@
                 "id": "a03ada11-55df-463d-9213-217a945f3374",
                 "resourcePath": "objects\\obj_bulletCasing\\obj_bulletCasing.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "0feeaf1a-69e4-424a-9257-128bf328f0b8",
+            "Value": {
+                "id": "a090cfe2-50e6-4453-957f-ad68af236429",
+                "resourcePath": "scripts\\PhoneSetEventAlarm\\PhoneSetEventAlarm.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -191,19 +191,19 @@
             }
         },
         {
-            "Key": "169da9c9-6b83-4f6e-9e94-4af12333a105",
-            "Value": {
-                "id": "0a42dfbe-67df-4702-9ae0-fe95ed0a24d8",
-                "resourcePath": "views\\169da9c9-6b83-4f6e-9e94-4af12333a105.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "169810c6-4153-4ba6-810a-404fa9a2db9f",
             "Value": {
                 "id": "1e0cd521-71ce-4000-a582-af4c1e1b0053",
                 "resourcePath": "sounds\\snd_jump\\snd_jump.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "169da9c9-6b83-4f6e-9e94-4af12333a105",
+            "Value": {
+                "id": "0a42dfbe-67df-4702-9ae0-fe95ed0a24d8",
+                "resourcePath": "views\\169da9c9-6b83-4f6e-9e94-4af12333a105.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -407,19 +407,19 @@
             }
         },
         {
-            "Key": "30f3329a-ca0d-4191-9266-57b25b64bd72",
-            "Value": {
-                "id": "450ea64d-473c-4f3b-92ed-9e1060d29602",
-                "resourcePath": "sprites\\spr_phoneBackground\\spr_phoneBackground.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "2f571dce-c9df-40b6-ab75-b5b765a96999",
             "Value": {
                 "id": "2b2fdad0-bef9-4d0c-94cd-6622f2f03329",
                 "resourcePath": "views\\2f571dce-c9df-40b6-ab75-b5b765a96999.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "30f3329a-ca0d-4191-9266-57b25b64bd72",
+            "Value": {
+                "id": "450ea64d-473c-4f3b-92ed-9e1060d29602",
+                "resourcePath": "sprites\\spr_phoneBackground\\spr_phoneBackground.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -791,19 +791,19 @@
             }
         },
         {
-            "Key": "5b9b07f1-c0c5-4433-8c3d-99a220b165ae",
-            "Value": {
-                "id": "bef03b6f-ac73-4bef-b1cc-1a315e395364",
-                "resourcePath": "scripts\\PhoneDrawMessageBox\\PhoneDrawMessageBox.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "592dbeb4-bf3b-409b-8f37-c4117ab510d7",
             "Value": {
                 "id": "9a936020-2ca4-44c2-a3be-7e4c507866bd",
                 "resourcePath": "sounds\\snd_rifleReload\\snd_rifleReload.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "5b9b07f1-c0c5-4433-8c3d-99a220b165ae",
+            "Value": {
+                "id": "bef03b6f-ac73-4bef-b1cc-1a315e395364",
+                "resourcePath": "scripts\\PhoneDrawMessageBox\\PhoneDrawMessageBox.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1247,22 +1247,6 @@
             }
         },
         {
-            "Key": "950a4878-625a-4737-8013-fa142a700189",
-            "Value": {
-                "id": "9694dc73-e842-4a73-ae0f-8c788c5b9d86",
-                "resourcePath": "views\\950a4878-625a-4737-8013-fa142a700189.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "99b553c3-7e5f-44d7-9a0a-d2ff87e89adb",
-            "Value": {
-                "id": "9050f461-330a-410b-84a5-1a3a515d3322",
-                "resourcePath": "sprites\\spr_replyWrong\\spr_replyWrong.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "90135487-1994-4d2b-964d-fddb1c628d78",
             "Value": {
                 "id": "3768275b-a395-4691-9eef-3f188101ad72",
@@ -1287,6 +1271,14 @@
             }
         },
         {
+            "Key": "950a4878-625a-4737-8013-fa142a700189",
+            "Value": {
+                "id": "9694dc73-e842-4a73-ae0f-8c788c5b9d86",
+                "resourcePath": "views\\950a4878-625a-4737-8013-fa142a700189.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "97adaeae-3b72-46ec-aac6-7c6bccf2f539",
             "Value": {
                 "id": "3a18e4c6-4f3a-4bd6-99e8-34d7d687e375",
@@ -1300,6 +1292,14 @@
                 "id": "20c2c081-ca61-46b4-b993-62868eb8755a",
                 "resourcePath": "views\\9987e28f-ccd9-4d59-aa9a-8acc74adf8fe.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "99b553c3-7e5f-44d7-9a0a-d2ff87e89adb",
+            "Value": {
+                "id": "9050f461-330a-410b-84a5-1a3a515d3322",
+                "resourcePath": "sprites\\spr_replyWrong\\spr_replyWrong.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1399,14 +1399,6 @@
             }
         },
         {
-            "Key": "b20e3aff-983d-4cb3-964a-53f29ff4a129",
-            "Value": {
-                "id": "a99ade84-62e0-403f-a6e4-3085a3f9109b",
-                "resourcePath": "scripts\\PhoneDrawTextMessage\\PhoneDrawTextMessage.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "ad8194c2-339c-4d9c-86e5-b8a4ac5a6012",
             "Value": {
                 "id": "9fff6136-2ae6-4595-9964-b517c5647e6f",
@@ -1420,6 +1412,14 @@
                 "id": "c75e6c0b-a616-4628-af3b-65c23eaae533",
                 "resourcePath": "sounds\\snd_rocketFly\\snd_rocketFly.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "b20e3aff-983d-4cb3-964a-53f29ff4a129",
+            "Value": {
+                "id": "a99ade84-62e0-403f-a6e4-3085a3f9109b",
+                "resourcePath": "scripts\\PhoneDrawTextMessage\\PhoneDrawTextMessage.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1519,19 +1519,19 @@
             }
         },
         {
-            "Key": "bf42fe07-2a9d-4579-b90c-f0fe31f266d7",
-            "Value": {
-                "id": "8b66457d-567c-4500-8399-4a7573848a8e",
-                "resourcePath": "scripts\\newMessage\\newMessage.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "be1569e1-7a70-412f-bd02-df663d749657",
             "Value": {
                 "id": "22d6b325-b2f4-4109-be5a-47cffcea97af",
                 "resourcePath": "tilesets\\ts_officeBack\\ts_officeBack.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "bf42fe07-2a9d-4579-b90c-f0fe31f266d7",
+            "Value": {
+                "id": "8b66457d-567c-4500-8399-4a7573848a8e",
+                "resourcePath": "scripts\\newMessage\\newMessage.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1911,14 +1911,6 @@
             }
         },
         {
-            "Key": "fc86914a-0ed9-4121-998a-ece778b68e8a",
-            "Value": {
-                "id": "9dfa5689-cb4c-475f-b82c-ddc3a9b33086",
-                "resourcePath": "objects\\Phone\\Phone.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "fc4b246d-2bb6-42e8-bd62-1fd8a6f9da19",
             "Value": {
                 "id": "b02a94cc-01b3-408f-acef-60c8ca8add65",
@@ -1932,6 +1924,14 @@
                 "id": "0387caec-6d91-4f2a-b2bb-45f8182962e1",
                 "resourcePath": "views\\fc7a1b3f-a479-4bc8-a64a-1a40aa513952.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fc86914a-0ed9-4121-998a-ece778b68e8a",
+            "Value": {
+                "id": "9dfa5689-cb4c-475f-b82c-ddc3a9b33086",
+                "resourcePath": "objects\\Phone\\Phone.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1984,13 +1984,13 @@
         "a3819678-5e36-471f-b47a-5eeaed40c2ca",
         "b20e3aff-983d-4cb3-964a-53f29ff4a129",
         "5b9b07f1-c0c5-4433-8c3d-99a220b165ae",
-        "c78216a9-2609-44a9-8d41-c85870eeedc8",
-        "9ca0b38e-4c8b-4af6-9065-02b4cc4ffa9d",
         "fc91e9c5-d8e6-469c-80fb-c1e6db2e6416",
         "bf42fe07-2a9d-4579-b90c-f0fe31f266d7",
         "d21e12b9-ccee-45d0-882c-b9788623e828",
         "70fd1393-d983-462b-af30-864567683089",
         "0feeaf1a-69e4-424a-9257-128bf328f0b8",
+        "c78216a9-2609-44a9-8d41-c85870eeedc8",
+        "9ca0b38e-4c8b-4af6-9065-02b4cc4ffa9d",
         "b392ddec-9055-4f81-998a-ca7bb1499698",
         "14855d79-00d3-4152-9b48-200cc30667ab"
     ],
