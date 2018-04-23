@@ -471,6 +471,14 @@
             }
         },
         {
+            "Key": "3abfdccc-226f-4df2-bb90-8960c0beca8c",
+            "Value": {
+                "id": "6ab48fdb-f0bc-4f52-84ef-d88054d09ac6",
+                "resourcePath": "objects\\PhoneSplash\\PhoneSplash.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3bf26afd-e0c5-4c1b-9e9f-723a77b77af0",
             "Value": {
                 "id": "d4f083b1-51eb-4442-9c2f-be2d78f150c1",
@@ -555,6 +563,14 @@
             "Value": {
                 "id": "6612ad36-f7ec-4cb2-bb24-3dd7f49a1f45",
                 "resourcePath": "sprites\\spr_enemy2Run\\spr_enemy2Run.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "433e5f04-8302-4a20-b765-84e143fefacb",
+            "Value": {
+                "id": "4111a0b2-bc4e-49fe-8bfb-51f89b76bf58",
+                "resourcePath": "sprites\\spr_phoneSilhouette\\spr_phoneSilhouette.yy",
                 "resourceType": "GMSprite"
             }
         },

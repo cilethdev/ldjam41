@@ -1,3 +1,8 @@
+
+if(is_undefined(player)){
+	return;	
+}
+
 if(phoneOut){
 	idealx = anchorOutx;
 	idealy = anchorOuty;

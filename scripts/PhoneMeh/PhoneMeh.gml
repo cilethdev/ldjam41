@@ -1,5 +1,5 @@
 /// @arg player
 var player = argument0;
-if(player.object_index == obj_player){
+if(!is_undefined(player)){
 	player.hp++;	
 }

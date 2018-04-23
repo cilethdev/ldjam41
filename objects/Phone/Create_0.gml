@@ -9,7 +9,7 @@ phoneWidth = sprite_get_width(spr_phoneBackground);
 phoneHeight = sprite_get_height(spr_phoneBackground);
 
 //anchors
-anchorOutx = guiWidth/2;
+anchorOutx = guiWidth*0.78;
 anchorOuty = guiHeight/2;
 anchorAwayx = guiWidth+phoneWidth*0.2;
 anchorAwayy = guiHeight*0.9;
