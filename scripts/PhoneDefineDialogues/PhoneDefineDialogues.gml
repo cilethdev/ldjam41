@@ -313,7 +313,7 @@ event[5] = PhoneAddMessage(event[5],her,	"bummer");
 event[5] = PhoneAddMessage(event[5],her,	"That must be rough");
 //bad chain
 event[6] = PhoneAddMessage(event[6],him,	"Ew!");
-event[5] = PhoneAddMessage(event[6],him,	"Dogs suck");
+event[6] = PhoneAddMessage(event[6],him,	"Dogs suck");
 event[6] = PhoneAddMessage(event[6],her,	"You must like cats :/");
 event[6] = PhoneAddMessage(event[6],him,	"And dogs are gross");
 event[6] = PhoneAddMessage(event[6],her,	". . .");
@@ -344,7 +344,7 @@ event[5] = PhoneAddMessage(event[5],her,	"You should try Darjeeling tea, its pre
 event[5] = PhoneAddMessage(event[5],him,	"sure");
 //bad chain
 event[6] = PhoneAddMessage(event[6],him,	"Beer");
-event[5] = PhoneAddMessage(event[6],him,	"I like to get home and clear my mind as fast as possible");
+event[6] = PhoneAddMessage(event[6],him,	"I like to get home and clear my mind as fast as possible");
 event[6] = PhoneAddMessage(event[6],her,	"hmm");
 event[6] = PhoneAddMessage(event[6],her,	"If you're stressed maybe you should try and resolve the issue?");
 event[6] = PhoneAddMessage(event[6],him,	"It's not an issue, I just like to have a few beers.");
@@ -373,7 +373,7 @@ event[5] = PhoneAddMessage(event[5],her,	"You should really try making time for 
 event[5] = PhoneAddMessage(event[5],her,	"It's important");
 //bad chain
 event[6] = PhoneAddMessage(event[6],him,	"I like my eggs fertilized.");
-event[5] = PhoneAddMessage(event[6],her,	"Ew");
+event[6] = PhoneAddMessage(event[6],her,	"Ew");
 event[6] = PhoneAddMessage(event[6],her,	"Isn't that some sort of delicacy");
 event[6] = PhoneAddMessage(event[6],her,	"I saw a video of it on Metube.");
 event[6] = PhoneAddMessage(event[6],her,	"It breaks my heart </3");
@@ -397,8 +397,8 @@ event[5] = PhoneAddMessage(event[5],him,	"They nearly always do ;)");
 event[5] = PhoneAddMessage(event[5],her,	"Thats rather selfless");
 //bad chain
 event[6] = PhoneAddMessage(event[6],him,	"I don't get bored.");
-event[5] = PhoneAddMessage(event[6],her,	"what? never?");
-event[5] = PhoneAddMessage(event[6],her,	"what do you do all day?");
+event[6] = PhoneAddMessage(event[6],her,	"what? never?");
+event[6] = PhoneAddMessage(event[6],her,	"what do you do all day?");
 event[6] = PhoneAddMessage(event[6],her,	"I don't get bored.");
 event[6] = PhoneAddMessage(event[6],him,	"Okay, I don't think I believe you.");
 output[i++] = event;
