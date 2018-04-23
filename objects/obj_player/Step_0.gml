@@ -169,23 +169,23 @@ if (dashing) {
 	SetDashVelocity();
 	animationState = ROLL;
 	
-	if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
-		vx = 0;
-	}
+	//if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
+	//	vx = 0;
+	//}
 	
 	if (dashT > 0) dashT--;
 	if (dashT == 0 || !onGround) {
 		dashT = -1;
 		dashing = false;
-		if (dashDir == 0 && place_meeting(x+(32*facing),y+1,obj_solid)) {
+		if (dashDir == 0) { // && place_meeting(x+(32*facing),y+1,obj_solid)) {
 			vx = 6;
 		} else
-		if (dashDir = 180 && place_meeting(x+(32*facing),y+1,obj_solid)) {
+		if (dashDir = 180) { //&& place_meeting(x+(32*facing),y+1,obj_solid)) {
 			vx = -6;
 		}
-		if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
-		vx = 0;
-	}
+		//if (dashT < 5 && !place_meeting(x+(32*facing),y+1,obj_solid)) {
+		//	vx = 0;
+		//}
 	}
 }
 

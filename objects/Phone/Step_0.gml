@@ -66,7 +66,10 @@ direction = dsin(ani_rumble)*ani_rumbleScale-dsin(ani_breath)*ani_breathScale/5;
 // key events.
 //take out or putaway phone
 if(keyboard_check_pressed(vk_tab)){
-	phoneOut = !phoneOut;	
+	phoneOut = !phoneOut;
+	
+	//SFX
+	PlaySound(snd_jump,1.3,0,1);
 }
 
 // select a response

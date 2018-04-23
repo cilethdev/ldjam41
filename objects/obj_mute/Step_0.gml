@@ -15,7 +15,7 @@ if mouseOn {
 	mouseEnter = false;
 }
 
-if (focus || mouseOn) {
+if (mouseOn) {
 	if Input.mLeftP || Input.kAttackP {
 		if mute == 0 {
 			mute = 1;

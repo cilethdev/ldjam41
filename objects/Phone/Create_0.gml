@@ -21,9 +21,9 @@ idealx = anchorAwayx;
 idealy = anchorAwayy;
 
 timeText = 1;
-timeEndOfEvent = 15;
+timeEndOfEvent = 30;
 timeBeginEvent = 0.5;
-timeToResponse = 10;
+timeToResponse = 20;
 
 //these numbers were all just gotten by measuring spr_phoneBackground.
 screenPaddingSide =  9;

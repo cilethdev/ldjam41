@@ -27,5 +27,15 @@ switch(room) {
 		layer_y("Crates2",camy*0.85);
 	
 	break;
+	case level_3:
+		//bg
+		layer_x("Sky",camx);
+		layer_y("Sky",camy);
+
+		layer_x("Mountains1",camx*0.95);
+		layer_y("Mountains1",camy);
+		layer_x("Mountains2",camx*0.925);
+		layer_y("Mountains2",0);
+	break;
 }
 

@@ -32,4 +32,7 @@ event[6] = PhoneAddMessage(event[6],false,	"...");
 event[6] = PhoneAddMessage(event[6],false,	"what the #@$% dude.");
 event[6] = PhoneAddMessage(event[6],false,	"I like white ok.");
 
+
+//SFX
+PlaySound(snd_phoneNotification,1,0,1);
 return event;

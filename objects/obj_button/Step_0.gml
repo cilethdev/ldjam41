@@ -2,6 +2,7 @@
 mouseOn = position_meeting(mouse_x,mouse_y,id);
 
 if (mouseOn) {
+	image_index = 1;
 	if (!mouseEnter) {
 		mouseEnter = true;
 		_springValue[SPRING_XSCALE] = 1.2;
@@ -16,6 +17,7 @@ if (mouseOn) {
 	}
 } else {
 	mouseEnter = -1;
+	image_index = 0;
 }
 
 if (focus || mouseOn) {
