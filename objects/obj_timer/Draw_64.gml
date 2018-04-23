@@ -22,5 +22,5 @@ while(string_length(secondDisplay) < 5){
 	secondDisplay += "0";	
 }
 
-draw_text(guiWidth*0.025,guiHeight*0.9,minuteDisplay + ":" + secondDisplay);
+draw_text(guiWidth*0.87,guiHeight*0.03,minuteDisplay + ":" + secondDisplay);
 
