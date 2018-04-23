@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+landed = false;
 
 hp   = 3;
 team = 1;

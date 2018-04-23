@@ -1,4 +1,4 @@
 num = 0;
 type = bType.gotoRm;
-rm  = level_1;
+rm  = rm_controls;
 text = "PLAY";

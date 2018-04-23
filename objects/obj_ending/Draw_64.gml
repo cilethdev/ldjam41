@@ -1,12 +1,13 @@
 /// @description
-FontSet(fnt_ending,c_white,fa_center,fa_bottom);
+FontSet(fnt_ending,c_white,fa_left,fa_bottom);
 var thanks =
 "00BOYFRIEND WAS MADE BY:\n" +
 "CODE: PATRICK HILL @CilethDev & ARON HOMMAS\n"+
 "ART: SAM BRAGG @SwordNStallion\n"+
 "MUSIC: TRISTAN DENIET\n"+
-"SOUND FX: PATRICK HILL & TRISTAN DENIET";
-draw_text(guiw/2,guih-16,thanks);
+"SOUND FX: PATRICK HILL & TRISTAN DENIET\n"+
+"SCRIPT: AMY WATANABE & AVA CORREA & ARON HOMMAS";
+draw_text(16,guih-16,thanks);
 
 
 //Thanks

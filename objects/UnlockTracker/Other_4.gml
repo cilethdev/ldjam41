@@ -50,7 +50,6 @@ if instance_exists(obj_player) {
 		}
 	} else {
 		with(obj_player) {
-			weapon = (other.currentRm != other.prevRm)? other.lastEquipped : weapons.pistol;
 			wpnUnlocked[weapons.pistol]		= other.wpnUnlocked[weapons.pistol];
 			wpnUnlocked[weapons.rifle]		= other.wpnUnlocked[weapons.rifle];
 			wpnUnlocked[weapons.shotgun]	= other.wpnUnlocked[weapons.shotgun];

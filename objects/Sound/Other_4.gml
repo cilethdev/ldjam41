@@ -26,7 +26,7 @@ switch(room) {
 			audio_stop_all();
 			audio_play_sound(music_bigBoy,0,1);
 			audio_sound_gain(music_bigBoy,0,0);
-			audio_sound_gain(music_bigBoy,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,5000);
+			audio_sound_gain(music_bigBoy,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,3000);
 		}
 	break;
 	case level_2:
@@ -34,7 +34,7 @@ switch(room) {
 			audio_stop_all();
 			audio_play_sound(music_freekyBeeky,0,1);
 			audio_sound_gain(music_freekyBeeky,0,0);
-			audio_sound_gain(music_freekyBeeky,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,5000);
+			audio_sound_gain(music_freekyBeeky,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,3000);
 		}
 	break;
 	case level_3:
@@ -42,7 +42,7 @@ switch(room) {
 			audio_stop_all();
 			audio_play_sound(music_rainDown,0,1);
 			audio_sound_gain(music_rainDown,0,0);
-			audio_sound_gain(music_rainDown,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,5000);
+			audio_sound_gain(music_rainDown,(Sound.masterV*Sound.musicV*Sound.musicVolume)*Sound.mute,3000);
 		}
 	break;
 }

@@ -8,4 +8,5 @@ if other.team != team {
 	yscale = 1.3;
 	
 	//SFX
+	PlaySound(snd_hitmark,1,0,0.6);
 }

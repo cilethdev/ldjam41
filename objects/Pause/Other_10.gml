@@ -17,13 +17,15 @@ with(all) {
 	}
 }
 
+
+
 resume   = instance_create_layer(camx+(camw/2),camy+(camh/2)-48,"Instances",obj_button);
 resume.num = 0;
 resume.text = "RESUME";
 resume.type = bType.resume;
 resume.xscale = 1.2;
 resume.yscale = 1.2;
-resume.depth = -10000;
+resume.depth = -1000;
 
 endGame	 = instance_create_layer(camx+(camw/2),camy+(camh/2)+48,"Instances",obj_button);
 endGame.num  = 1;
@@ -32,7 +34,10 @@ endGame.type = bType.endLevel;
 endGame.rm   = m_main;
 endGame.xscale = 1.2;
 endGame.yscale = 1.2;
-endGame.depth = -10000;
+endGame.depth = -1000;
+
+cursor	= instance_create_layer(mouse_x,mouse_y,"BGControl",obj_cursor);
+cursor.depth = -10000;
 
 nItems = instance_number(par_menuItem)-1;
 

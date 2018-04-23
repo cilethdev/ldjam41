@@ -10,6 +10,8 @@ with(obj_player) {
 	fireCD = 30;
 }
 
+
+
 //UNLOCK TEXT
 var txt = instance_create_layer(0,0,"HUD",obj_unlockText);
 txt.text = text;

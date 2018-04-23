@@ -1,5 +1,5 @@
 /// @description 
-if room == m_main || room == m_settings || room == rm_intro || instance_exists(obj_gameover) || room == rm_ending exit;
+if room == m_main || room == m_settings || room == rm_intro || instance_exists(obj_gameover) || room == rm_ending || room == rm_controls exit;
 if keyboard_check_pressed(vk_escape) {
 	paused = !paused;
 	

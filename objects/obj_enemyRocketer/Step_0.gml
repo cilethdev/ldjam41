@@ -21,7 +21,7 @@ if (instance_exists(obj_player)) {
 			}
 		break;
 		case ATTACK:
-			wpnAngle = point_direction(x,y,obj_player.x,obj_player.y);
+			wpnAngle = point_direction(x,y-14,obj_player.x,obj_player.y);
 			//Attack
 			var los = collision_line(x,y-14,obj_player.x,obj_player.y-14,obj_solid,-1,1);
 			if (distance_to_object(obj_player) < range && canFire && !los) {
@@ -32,7 +32,7 @@ if (instance_exists(obj_player)) {
 				
 				canFire = false;
 				fireCD  = fireRate+irandom_range(-15,15);
-				var rocket = instance_create_depth(x,y-14,depth-1,obj_enemyRocket);
+				var rocket = instance_create_depth(x+lengthdir_x(16,wpnAngle),y-14+lengthdir_y(16,wpnAngle),depth-1,obj_enemyRocket);
 				rocket.spd = 8;
 				rocket.dir = wpnAngle;
 				rocket.image_angle = wpnAngle;

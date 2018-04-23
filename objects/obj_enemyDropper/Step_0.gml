@@ -1,5 +1,5 @@
 /// @description 
-
+vxMax = (hasDropped)? 10 : 7;
 // Inherit the parent event
 event_inherited();
 

@@ -35,7 +35,7 @@ switch(room) {
 		layer_x("Mountains1",camx*0.95);
 		layer_y("Mountains1",camy);
 		layer_x("Mountains2",camx*0.925);
-		layer_y("Mountains2",0);
+		layer_y("Mountains2",camy);
 	break;
 }
 

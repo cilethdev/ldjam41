@@ -13,6 +13,13 @@ if (onGround) {
 		landed = true;
 		xscale = 1.5;
 		yscale = 0.5;
+		
+		//Dust
+		var dust = instance_create_depth(x-12,y+random_range(0,-2),depth-10,obj_dust);
+		dust.image_angle = choose(0,90,180,270);
+		
+		var dust2 = instance_create_depth(x+12,y+random_range(0,-2),depth-10,obj_dust);
+		dust2.image_angle = choose(0,90,180,270);
 	}
 }
 if (!onGround) {

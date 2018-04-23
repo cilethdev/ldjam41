@@ -5,10 +5,11 @@ ini_open("settings.ini");
 	musicV	= ini_read_real("settings","musicV",1);
 	sfxV	= ini_read_real("settings","sfxV",1);
 	mute	= ini_read_real("settings","mute",1);
-	musicVolume  = ini_read_real("settings","musicVolume",1);
+	//musicVolume  = ini_read_real("settings","musicVolume",0.6);
 ini_close();
 
 showSoundSettings = false;
+musicVolume = 0.6;
 
 musicPlaying = -1;
 

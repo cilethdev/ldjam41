@@ -50,13 +50,16 @@ switch(animationState) {
 		//sfx
 		var frame = floor(image_index);
 		if (frame == 1 || frame == 3) {
-			
 			//SFX
 			if (!footStepPlayed) {
 				footStepPlayed = true;
 				var snd = choose(snd_footstep1,snd_footstep2,snd_footstep3,snd_footstep4);
 				var pitch = random_range(0.9,1);
 				PlaySound(snd,pitch,0,1);
+				
+				//Dust
+				var dust = instance_create_depth(x-(8*sign(vx)),y+random_range(0,-2),depth-10,obj_dust);
+				dust.image_angle = choose(0,90,180,270);
 			}
 		}
 		if (frame != 1 && frame != 3) {
@@ -78,7 +81,9 @@ switch(animationState) {
 		}
 	break;
 	case ROLL:
-		sprite_index = spr_playerRoll;
+		if sprite_index != spr_playerRoll {
+			sprite_index = spr_playerRoll;
+		}
 	break;
 }
 
