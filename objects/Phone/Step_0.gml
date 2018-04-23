@@ -1,15 +1,19 @@
 
-if(is_undefined(player)){
-	return;	
+if(stop){
+	alarm[0] = -1;
+	return;
 }
 
 if(phoneOut){
 	idealx = anchorOutx;
 	idealy = anchorOuty;
 }
-else{
+else{	
 	idealx = anchorAwayx;
 	idealy = anchorAwayy;
+	if(responseState != ResponseState.noSelectionMade){
+		idealy += 30;
+	}
 }
 
 //move to the ideal location
@@ -43,15 +47,18 @@ else{
 	}
 }
 
+if(ani_vibrate > 0){
+	ani_vibrate--;
+}
+
 
 ani_messageShift *= 0.7; //scrolls new messages onto the screen.
 
-
 //horizontal
-ani_x = dsin(ani_breath)*ani_breathScale;
+ani_x = dsin(ani_breath)*ani_breathScale+dsin(ani_vibrate*ani_vibrateRate*2)*ani_vibrateScale;
 
 //vertical
-ani_y = dsin(2*ani_breath)*ani_breathScale/4;
+ani_y = dsin(2*ani_breath)*ani_breathScale/4+dsin(ani_vibrate*ani_vibrateRate)*ani_vibrateScale;
 
 //roll
 direction = dsin(ani_rumble)*ani_rumbleScale-dsin(ani_breath)*ani_breathScale/5;
@@ -73,14 +80,17 @@ if(responseState == ResponseState.noSelectionMade){
 			if(i == responseKey[correctResponse]){
 				responseState = ResponseState.correct;
 				PhoneCorrect(player);
+				PhoneCreateSplash(x,y,direction,c_green);
 			}
 			else if(i == responseKey[mediumResponse]){				
 				responseState = ResponseState.medium;
 				PhoneMeh(player);
+				PhoneCreateSplash(x,y,direction,make_color_rgb(96,176,226));
 			}
 			else{
 				responseState = ResponseState.wrong;
 				PhoneWrong(player);
+				PhoneCreateSplash(x,y,direction,c_red);
 			}
 			PhoneSetEventAlarm(0);
 		}

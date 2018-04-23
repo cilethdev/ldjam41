@@ -61,7 +61,7 @@ footStepPlayed = false;
 
 //HUD
 hud = instance_create_layer(0,0,"HUD",HUD);
-instance_create_depth(0,0,-1100,Phone);
+phone = instance_create_depth(0,0,-1100,Phone);
 
 //Health
 hp = 5;

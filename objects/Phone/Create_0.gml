@@ -1,6 +1,7 @@
 /// @description set initial state of the phone.
 // You can write your code in this editor
 player = instance_find(obj_player,0);
+stop = false;
 
 //get the screen size.
 guiWidth = display_get_gui_width();
@@ -53,10 +54,12 @@ ani_rumbleRate = 20;
 ani_rumbleScaleActive = 6;
 ani_rumbleScale = 0;
 ani_rumble = 0;
+ani_roll_modifier = 3;
 
-ani_vibrateRate = 30;
-ani_vibrateScale = 3;
 ani_vibrate = 0;
+ani_vibrateRate = 80;
+ani_vibrateScale = 1;
+ani_vibrateActive = 30;
 
 ani_breathRate = 0.5;
 ani_breathScaleActive = 50;

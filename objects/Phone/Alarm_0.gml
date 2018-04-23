@@ -4,6 +4,7 @@ switch(responseState){
 	case ResponseState.noSelectionMade:
 		responseState = ResponseState.tooLate;
 		PhoneTooLate(player);
+		PhoneCreateSplash(x,y,direction,c_yellow)
 	case ResponseState.correct:
 	case ResponseState.medium:
 	case ResponseState.wrong:
@@ -73,5 +74,6 @@ switch(responseState){
 		//set the response state
 		responseState= ResponseState.noSelectionMade;
 		PhoneSetEventAlarm(timeToResponse);
+		ani_vibrate = ani_vibrateActive;
 		break;
 }
