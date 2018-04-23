@@ -1,13 +1,18 @@
 /// @description set initial state of the phone.
 // You can write your code in this editor
 
+timeText = 1;
+timeEndOfEvent = 15;
+timeBeginEvent = 0.5;
+timeToResponse = 10;
+
 //potentially an enum to represent different phone actions.
 // sitting off the screen
 // jumping, moving left/right, shooting, explosion, mixture of the different events?
 phoneWidth = sprite_get_width(spr_phoneBackground);
 phoneHeight = sprite_get_height(spr_phoneBackground);
 
-hyp = sqrt((phoneWidth*phoneWidth+phoneHeight*phoneHeight)/4);
+// hyp = sqrt((phoneWidth*phoneWidth+phoneHeight*phoneHeight)/4);
 
 //these numbers were all just gotten by measuring spr_phoneBackground.
 screenPaddingSide =  9;
@@ -17,7 +22,7 @@ screenHeight = 337 - screenPaddingTop;
 
 messageSpace = 5;
 
-namey = 61; // where the name is drawn at the top of the phone.
+namey = 51; // where the name is drawn at the top of the phone.
 firstResponsey = 342;
 secondResponsey = 387;
 thirdResponsey = 426;
@@ -33,7 +38,7 @@ screenSurface = -1; //this is where the messages will be drawn to.  then the por
 //animation crap.
 ani_rumbleRate = 8;
 ani_rumbleScale = 5;
-ani_rumble = 0; //
+ani_rumble = 0;
 
 ani_messageShift = 0; // this is used when a new message is added to the chain to allow the message to slide in.
 
@@ -54,33 +59,33 @@ responseKey[0]=0;
 responseKey[1]=1;
 
 //text history stuff
-herName = "default name";
+herName = "Babrie";
 
 //the response state
-response[0] = "compliment her dog";
-response[1] = "flirt";
-response[2] = "\"I prefer cats\"";
+response[0] = "          ";
+response[1] = "          ";
+response[2] = "          ";
 correctResponse = 0; //can be 0 or 1.
 
 messageIndex = 0;
 
 correctResponseChain[0] = newMessage(false,"demo correct");
-correctResponseChain = PhoneAddMessage(correctResponseChain,true,"demo Correct");
 mediumResponseChain[0] = newMessage(false,"demo medium");
-mediumResponseChain = PhoneAddMessage(mediumResponseChain,true,"demo medium");
 wrongResponseChain[0] = newMessage(false,"demo wrong");
-wrongResponseChain = PhoneAddMessage(wrongResponseChain,true,"demo wrong");
+
+tooLateResponseChain[0] = newMessage(false,"demo too late");
 
 enum ResponseState{
-	noEvent,
-	noSelectionMade,
-	correct,
+	noEvent,			//between events
+	noSelectionMade,	//the event is going, but no selection has been made yet.
+	correct,			//the following occur during event and result in the event's completion.
 	medium,
 	wrong,
 	tooLate
 }
 
-responseState = ResponseState.noSelectionMade;
+responseState = ResponseState.noEvent;
+PhoneSetEventAlarm(timeToResponse);
 
 textHistory[0] = newMessage(false,"hello");
 

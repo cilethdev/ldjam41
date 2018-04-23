@@ -13,10 +13,12 @@ var mine = argument4;
 
 var _minWidth = 40;
 var _minHeight = 40;
+var _widthDifference = 0;
 
 //don't do anything if the box is wrong.
 if(w < _minWidth){
-	w = _minWidth;	
+	_widthDifference = _minWidth-w;
+	w = _minWidth;
 }
 if(h < _minHeight){
 	h = _minHeight;	
@@ -24,6 +26,7 @@ if(h < _minHeight){
 
 var _messageSprite; // the style of message box.
 if(mine){
+	dx-=_widthDifference;
 	_messageSprite = spr_messageHim;
 }
 else {

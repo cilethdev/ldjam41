@@ -16,14 +16,14 @@ var _sprWidth = sprite_get_width(spr_response);
 var color;
 if(selected != 0){
 	if(selected == 2){
-		color = c_black;	
+		color = c_gray;	
 	}
 	else{
 		if(key==-1){
 			color = c_red;	
 		}
 		else{
-			color = c_green;	
+			color = make_color_rgb(96,176,226);//from him message color.	
 		}
 	}
 }

@@ -7,9 +7,14 @@ var textHistory = argument0;
 var mine = argument1;
 var message = argument2;
 
-var _history = 7;
+draw_set_font(fnt_phoneTextMessage);
+ani_messageShift = string_height(message)*1.3;
 
-/// should also play a sound depending upon who sent the message
+if(!is_array(textHistory)){ //make this an array if it isn't already.
+	textHistory = [];
+}
+var _history = 7;
+// should also play a sound depending upon who sent the message
 var _newTextHistory;
 _newTextHistory[0] = newMessage(mine,message);
 //shiftCopy the array. also prevents the array from ever being longer than 7 messages.

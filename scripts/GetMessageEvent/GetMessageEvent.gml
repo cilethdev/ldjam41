@@ -11,11 +11,12 @@
 //5 the medium message chain
 //6 the wrong message chain.
 
-var event;
-event[0] = "my favorite color is white. what is your favorite color?";
-event[1] = "state your favorite color";
-event[2] = "say the same as her";
-event[3] = "white isn't a color";
+var event = array_create(7);
+event[0] = "My favorite color is white. what is your favorite color?";
+
+event[1] = "Say your favorite";
+event[2] = "Copy her color";
+event[3] = "\"White isn't a color\"";
 
 event[4] = PhoneAddMessage(event[4],true,	"My favorite color is red.");
 event[4] = PhoneAddMessage(event[4],false,	"Nice!");

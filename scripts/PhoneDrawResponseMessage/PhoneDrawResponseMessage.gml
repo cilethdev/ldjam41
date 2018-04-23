@@ -11,6 +11,7 @@ var message = argument2;
 var key = argument3;
 var selected = argument4;
 
+FontSet(fnt_response,c_black,fa_center,fa_top);
 //draw the background
 var _padding = 10;
 var _sprWidth = sprite_get_width(spr_response);
@@ -38,7 +39,13 @@ else {
 }
 //draw corners
 PhoneDrawResponseBox(dx-(_width-_keyShift)/2,dy,_width,key,selected);
-FontSet(fnt_response,c_black,fa_center,fa_top);
+
+if(selected == 1){
+	FontSet(fnt_response,c_white,fa_center,fa_top);
+}
+else{
+	FontSet(fnt_response,c_black,fa_center,fa_top);
+}
 draw_text(dx+_keyShift/2,dy+_fontDownShift,message);
 //draw the key
 if(key == -1){

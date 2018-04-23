@@ -95,10 +95,26 @@
             }
         },
         {
+            "Key": "0feeaf1a-69e4-424a-9257-128bf328f0b8",
+            "Value": {
+                "id": "a090cfe2-50e6-4453-957f-ad68af236429",
+                "resourcePath": "scripts\\PhoneSetEventAlarm\\PhoneSetEventAlarm.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "121eeb91-11ac-4a1a-82fd-36dc5c1d6290",
             "Value": {
                 "id": "b68179df-5181-476f-996f-419d21147f43",
                 "resourcePath": "scripts\\cutscene_end_action\\cutscene_end_action.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "14855d79-00d3-4152-9b48-200cc30667ab",
+            "Value": {
+                "id": "ebfd5fc1-5539-49ed-af50-4a6183829043",
+                "resourcePath": "scripts\\GetTooLateResponseChain\\GetTooLateResponseChain.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1099,7 +1115,9 @@
         "bf42fe07-2a9d-4579-b90c-f0fe31f266d7",
         "d21e12b9-ccee-45d0-882c-b9788623e828",
         "70fd1393-d983-462b-af30-864567683089",
-        "b392ddec-9055-4f81-998a-ca7bb1499698"
+        "0feeaf1a-69e4-424a-9257-128bf328f0b8",
+        "b392ddec-9055-4f81-998a-ca7bb1499698",
+        "14855d79-00d3-4152-9b48-200cc30667ab"
     ],
     "tutorial": ""
 }

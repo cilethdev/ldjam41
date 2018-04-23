@@ -10,6 +10,7 @@ var message = argument2;
 var mine = argument3;
 var width = argument4;
 
+draw_set_font(fnt_phoneTextMessage);
 var _textSpacerHeight = 15;
 var _messagePaddingWidth = 10;
 var _messagePaddingHeight = 10;
@@ -17,15 +18,14 @@ var _messageWidth = string_width_ext(message,_textSpacerHeight,width-2*_messageP
 var _messageHeight = string_height_ext(message,_textSpacerHeight,width-2*_messagePaddingWidth);
 //decide which color is going to be used.
 
-
-if(mine){ //draws to the left of x.
+if(mine){ // draws to the left of x.
 	// draw message box
 	PhoneDrawMessageBox(dx-(_messageWidth+2*_messagePaddingWidth),dy-(_messageHeight+2*_messagePaddingHeight),_messageWidth+2*_messagePaddingWidth,_messageHeight+2*_messagePaddingHeight,mine)
 	// draw the message text.
 	FontSet(fnt_phoneTextMessage,c_white,fa_left,fa_top);
 	draw_text_ext(dx-(_messageWidth+_messagePaddingWidth),dy-(_messageHeight+_messagePaddingHeight),message,_textSpacerHeight,width-2*_messagePaddingWidth);
 }
-else{ //draws to the right of x.
+else{ // draws to the right of x.
 	// draw message box
 	PhoneDrawMessageBox(dx,dy-(_messageHeight+2*_messagePaddingHeight),_messageWidth+2*_messagePaddingWidth,_messageHeight+2*_messagePaddingHeight,mine);
 	// draw the message text.
