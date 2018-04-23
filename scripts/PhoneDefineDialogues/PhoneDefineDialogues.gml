@@ -167,34 +167,76 @@ event[6] = PhoneAddMessage(event[6],her,	"What about rocks? are you a geologist?
 event[6] = PhoneAddMessage(event[6],him,	"...yeah");
 output[i++] = event;
 
-// Im a bearologist
+// hello
 event = array_create(7);
-event[0] = "I'm actually a bearologist.  Which is why I know so much about bears.  What do you do?";
+event[0] = "Hello";
 //responses
-event[1] = "Boring Geologist";
-event[2] = "Not much";
-event[3] = "I'm a spy";
+event[1] = "Hi";
+event[2] = "Low";
+event[3] = "Awkward";
 //positive chain
-event[4] = PhoneAddMessage(event[4],him,	"I'm a geologist at the BORING company.");
-event[4] = PhoneAddMessage(event[4],him,	"Get it ;P");
-event[4] = PhoneAddMessage(event[4],her,	"Haha, I'm sure geology isn't THAT boring");
-event[4] = PhoneAddMessage(event[4],her,	"though it does sound");
-event[4] = PhoneAddMessage(event[4],her,	". . .");
-event[4] = PhoneAddMessage(event[4],her,	"sedimentary");
-event[4] = PhoneAddMessage(event[4],him,	"lol");
+event[4] = PhoneAddMessage(event[4],him,	"Hi there, how's it going");
+event[4] = PhoneAddMessage(event[4],her,	"Not bad.");
+event[4] = PhoneAddMessage(event[4],him,	"Pretty slow at the office today.");
+event[4] = PhoneAddMessage(event[4],her,	"It's nice to take a breather every once in a while.");
 //meh chain
-event[5] = PhoneAddMessage(event[5],him,	"Not much");
-event[5] = PhoneAddMessage(event[5],him,	"I don't want to bore you with the details, but I'm a geologist.");
-event[5] = PhoneAddMessage(event[5],her,	"Oh it can't be that bad.");
+event[5] = PhoneAddMessage(event[5],him,	"Low");
+event[5] = PhoneAddMessage(event[5],her,	". . .");
+event[5] = PhoneAddMessage(event[5],her,	"What?");
+event[5] = PhoneAddMessage(event[5],him,	"You say hi, I say low.");
+event[5] = PhoneAddMessage(event[5],him,	"lol");
+event[5] = PhoneAddMessage(event[5],her,	"oh...nice");
 //bad chain
-event[6] = PhoneAddMessage(event[6],him,	"I'm a secret agent.");
-event[6] = PhoneAddMessage(event[6],him,	"In fact, I'm in the middle of killing a lot of people.");
-event[6] = PhoneAddMessage(event[6],him,	"I mean...");
-event[6] = PhoneAddMessage(event[6],him,	"I like rocks");
-event[6] = PhoneAddMessage(event[6],her,	"Haha what?");
-event[6] = PhoneAddMessage(event[6],her,	"That's a joke right?");
-event[6] = PhoneAddMessage(event[6],her,	"What about rocks? are you a geologist?");
-event[6] = PhoneAddMessage(event[6],him,	"...yeah");
+event[6] = PhoneAddMessage(event[6],him,	"... :|");
+event[6] = PhoneAddMessage(event[6],him,	"awkward");
+event[6] = PhoneAddMessage(event[6],her,	". . .");
+output[i++] = event;
+
+//weekedn plans
+event = array_create(7);
+event[0] = "You doing anything fun this weekend?";
+//responses
+event[1] = "Yup";
+event[2] = "Free time";
+event[3] = "Nope";
+//positive chain
+event[4] = PhoneAddMessage(event[4],him,	"Yup");
+event[4] = PhoneAddMessage(event[4],him,	"I managed to find some tickets to the Warmgame concert!");
+event[4] = PhoneAddMessage(event[4],her,	"Oh nice, they're pretty good.");
+event[4] = PhoneAddMessage(event[4],her,	"You going with friends?");
+event[4] = PhoneAddMessage(event[4],him,	"I'm not sure yet.");
+//meh chain
+event[5] = PhoneAddMessage(event[5],him,	"I'm looking forward to a couple free days");
+event[5] = PhoneAddMessage(event[5],him,	"Sometimes no thing is the best thing");
+event[5] = PhoneAddMessage(event[5],her,	"hmm");
+//bad chain
+event[6] = PhoneAddMessage(event[6],him,	"nope.");
+event[6] = PhoneAddMessage(event[6],her,	"k");
+output[i++] = event;
+
+// what do you do for fun?
+event = array_create(7);
+event[0] = "It may be weird, but recently I've been folding highly detailed paper airplanes.  Do you have any weird hobbies?";
+//responses
+event[1] = "I like rocks";
+event[2] = "Interesting";
+event[3] = "I am very normal";
+//positive chain
+event[4] = PhoneAddMessage(event[4],him,	"Haha nice");
+event[4] = PhoneAddMessage(event[4],him,	"I like to collect interesting rocks");
+event[4] = PhoneAddMessage(event[4],her,	"Haha thats so random");
+event[4] = PhoneAddMessage(event[4],him,	"I'm a geologist for a living, but i actually love what I do.");
+event[4] = PhoneAddMessage(event[4],him,	":)");
+//meh chain
+event[5] = PhoneAddMessage(event[5],him,	"Interesting");
+event[5] = PhoneAddMessage(event[5],him,	"Any particularly impressive models?");
+event[5] = PhoneAddMessage(event[5],her,	"Though not technically an airplane");
+event[5] = PhoneAddMessage(event[5],her,	"I recently folded a space shuttle that turned out really well.");
+event[5] = PhoneAddMessage(event[5],him,	"I'd like to see that sometime");
+//bad chain
+event[6] = PhoneAddMessage(event[6],him,	"I'm actually very normal");
+event[6] = PhoneAddMessage(event[6],him,	"Nothing as weird as that");
+event[6] = PhoneAddMessage(event[6],him,	"haha");
 output[i++] = event;
 //done 
 return output;
