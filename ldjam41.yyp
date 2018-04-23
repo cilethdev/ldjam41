@@ -663,18 +663,18 @@
             }
         },
         {
-            "Key": "3e389db8-cd92-4467-99a9-af7e68a58dc1",
-            "Value": {
-                "id": "d15859c0-d9d7-4cdb-9169-721d77fec155",
-                "resourcePath": "objects\\obj_timer\\obj_timer.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "3e3039c3-14eb-49ec-b52d-378b485a6082",
             "Value": {
                 "id": "4ca86f04-e5cf-4799-9dab-984a341c1ebb",
                 "resourcePath": "objects\\obj_controls\\obj_controls.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3e389db8-cd92-4467-99a9-af7e68a58dc1",
+            "Value": {
+                "id": "d15859c0-d9d7-4cdb-9169-721d77fec155",
+                "resourcePath": "objects\\obj_timer\\obj_timer.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -868,6 +868,14 @@
                 "id": "14b67da6-ecb0-4e6f-a52d-6e6a58f39c60",
                 "resourcePath": "scripts\\OnGround\\OnGround.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4d2f366c-79d4-4dd7-8045-5c5b3efdcd7c",
+            "Value": {
+                "id": "aad164f6-9cee-4a48-8962-9b39c1bcfb5c",
+                "resourcePath": "tilesets\\ts_props\\ts_props.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -1839,19 +1847,19 @@
             }
         },
         {
-            "Key": "a72f98ae-b427-4da6-8854-be7f4cea13c2",
-            "Value": {
-                "id": "85fb59d6-0345-43a3-83f9-804deffcffd5",
-                "resourcePath": "objects\\obj_timerToggle\\obj_timerToggle.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "a633e77c-949c-412e-8587-329237813edd",
             "Value": {
                 "id": "f7b6894a-4c63-42b9-9873-734ddb616165",
                 "resourcePath": "sprites\\bg_level3_mountains2\\bg_level3_mountains2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a72f98ae-b427-4da6-8854-be7f4cea13c2",
+            "Value": {
+                "id": "85fb59d6-0345-43a3-83f9-804deffcffd5",
+                "resourcePath": "objects\\obj_timerToggle\\obj_timerToggle.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1900,6 +1908,14 @@
                 "id": "63577f6a-7c64-433d-80d6-32d93e838586",
                 "resourcePath": "scripts\\PhoneDefineDialogues\\PhoneDefineDialogues.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ac58afeb-bdfa-41f2-8493-ca22da1865e3",
+            "Value": {
+                "id": "853f796a-5762-4efb-9558-ce047743f8a9",
+                "resourcePath": "sprites\\spr_props\\spr_props.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
