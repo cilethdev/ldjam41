@@ -1,7 +1,7 @@
 /// @description 
 display_set_gui_size(960,540);
 
-random_set_seed(current_time);
+randomize()
 
 //Initialze singletons
 instance_create_layer(0,0,"Instances",Input);
