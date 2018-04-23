@@ -86,7 +86,7 @@ responseKey[0]=0;
 responseKey[1]=1;
 
 //text history stuff
-herName = "Babrie"; // should get random name.
+herName = global.herName; // should get random name.
 events = PhoneDefineDialogues();
 
 //the response state

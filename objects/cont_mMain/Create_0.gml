@@ -6,3 +6,5 @@ with(par_menuItem) {
 nItems = itemCount-1;
 
 menuPos = -1;
+
+global.herName = GetHerName();
