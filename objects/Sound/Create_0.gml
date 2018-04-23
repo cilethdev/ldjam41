@@ -8,3 +8,15 @@ ini_open("settings.ini");
 ini_close();
 
 showSoundSettings = false;
+
+musicPlaying = -1;
+musicVolume  = 1;
+
+menuMusic = -1;
+
+trackPos = 0;
+
+introHasPlayed = false;
+intro_length = 97.74;
+loop_length	 = 93.642;
+total_length = intro_length+loop_length;

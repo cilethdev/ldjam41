@@ -17,16 +17,15 @@ if (onGround) {
 }
 if (!onGround) {
 	landed = false;
-	if (!wallJumpT && (cLeft || cRight)) {
-		wallJumpT = 0;
+	if (!wallJumpT && (cLeft || cRight) && !wallStick) {
 		if (!onWall && vy >= 0) {
 			onWall = true;
 			vy = 0;
 		}
-		if (cLeft && Input.kLeft) {
+		if (!onWall && cLeft && Input.kLeft) {
 			onWall = true;
 		}
-		if (cRight && Input.kRight) {
+		if (!onWall && cRight && Input.kRight) {
 			onWall = true;
 		}
 	}

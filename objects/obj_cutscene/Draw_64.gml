@@ -7,6 +7,6 @@ if (fade != -1) {
 }
 
 if (textCopy != "") {
-	FontSet(fnt_HUD,c_white,fa_center,fa_middle);
+	FontSet(fnt_intro,c_white,fa_center,fa_middle);
 	draw_text(display_get_gui_width()/2,display_get_gui_height()/2,textCopy);
 }

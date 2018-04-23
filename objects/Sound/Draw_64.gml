@@ -7,5 +7,6 @@ if showSoundSettings {
 	"MASTER: " + string(masterV) +
 	"\nMUSIC: " + string(musicV) +
 	"\nSFX: " + string(sfxV) +
-	"\nMUTE: " + string(mute));
+	"\nMUTE: " + string(mute) +
+	"\nTRACK POS: " + string(trackPos));
 }

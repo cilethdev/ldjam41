@@ -26,15 +26,17 @@ if (!dashing) {
 
 if (!wallJumpT) {
 	if (Input.kLeft) {
+		if (onGround) {
+			animationState = RUN;
+		}
 		if (!onWall) {
-			facing = -1;
 			if (!slide) {
-				vx = Approach(vx,vxMax*facing,tempAcc);
+				vx = Approach(vx,-vxMax,tempAcc);
 			} else {
 				if (!onGround) {
 					if (vx > 0) {
 						if (slide) slide--;
-						vx = Approach(vx,vxMax*facing,tempAcc);
+						vx = Approach(vx,-vxMax,tempAcc);
 					}
 				}
 			}
@@ -43,32 +45,31 @@ if (!wallJumpT) {
 				wallStick++;
 				if (wallStick == 10) {
 					onWall = false;
-					wallJumpT = 10;
 				}
 			}
 		}
 	}
 
 	if (Input.kRight) {
+		if (onGround) {
+			animationState = RUN;
+		}
 		if (!onWall) {
-			facing = 1;
 			if (!slide) {
-				vx = Approach(vx,vxMax*facing,tempAcc);
+				vx = Approach(vx,vxMax,tempAcc);
 			} else {
 				if (!onGround) {
 					if (vx < 0) {
 						if slide slide--;
-						vx = Approach(vx,vxMax*facing,tempAcc);
+						vx = Approach(vx,vxMax,tempAcc);
 					}
 				}
 			}
-				
 		} else {
 			if (cLeft) {
 				wallStick++;
 				if (wallStick == 10) {
 					onWall = false;
-					wallJumpT = 10;
 				}
 			}
 		}
@@ -77,33 +78,63 @@ if (!wallJumpT) {
 
 if (!Input.kLeft && !Input.kRight && !dashing && !slide && !wallJumpT) {
 	vx = Approach(vx,0,tempFric);
+	if (onGround) {
+		animationState = IDLE;
+	}
 }
 
 if (Input.kJumpP && !dashing) {
 	if (onWall) {
 		if (cLeft && !onGround) {
+			if Input.kLeft {
+				facing = 1;
+				vx = vxMax*0.9;
+				vy = jspd;
+				onWall = false;
+				wallJumpT = 5;
+				wallStick = 0;
+			} else {
 				facing = 1;
 				vx = vxMax;
 				vy = jspd;
 				onWall = false;
 				wallJumpT = 30;
 				wallStick = 0;
+			}
+			
+			//sfx
+			PlaySound(snd_jump,1,0,1);
 		}
 		if (cRight && !onGround) {
+			if Input.kRight {
+				facing = -1;
+				vx = -vxMax*0.9;
+				vy = jspd;
+				onWall = false;
+				wallJumpT = 5;
+				wallStick = 0;
+			} else {
 				facing = -1;
 				vx = -vxMax;
 				vy = jspd;
 				onWall = false;
 				wallJumpT = 30;
 				wallStick = 0;
+			}
+			
+			//sfx
+			PlaySound(snd_jump,1,0,1);
 		}
 		jNum = 1;
 		if (slide) slide = 2;
 	} else
-	if (jNum < jMax) {
+	if (jNum < jMax && onGround) {
 		jNum++;
 		vy = jspd;
 		bounce = false;
+		
+		//sfx
+		PlaySound(snd_jump,1,0,1);
 	
 		//vfx
 		xscale = 0.5;
@@ -114,6 +145,7 @@ if (Input.kJumpP && !dashing) {
 if (Input.kJumpR && vy < -2 && !bounce) {
 	vy = -2;
 }
+
 
 //WallJump timers
 if (wallJumpT) wallJumpT--;
@@ -127,7 +159,7 @@ if (Input.kDash && canDash) {
 	canDash = false;
 	dashCD	= 30;
 	dashing = true;
-	dashT	= 10;
+	dashT	= 15;
 	dashDir = GetDashDir();
 }	
 if (dashing) {
@@ -143,13 +175,6 @@ if (dashing) {
 			vx = -vxMax;
 		}
 	}
-	if (onGround) {
-		if (dashDir == 225 || dashDir == 315) {
-			slide	= 6;
-			dashT	= -1;
-			dashing = false;
-		}
-	}	
 }
 
 if (dashCD > 0) dashCD--;
@@ -162,14 +187,99 @@ if (slide && (onGround || cLeft || cRight)) {
 	slide--;
 }
 
-image_blend = (slide)? c_aqua : c_white;
+//image_blend = (slide)? c_aqua : c_white;
 #endregion
 
 #region Attack
-if (!attackCD && !onWall && Input.kAttackP) {
-	attackCD = 30;
-	hitBox = HitBoxCreate(24*facing,20,4*facing,-16,5,2+abs(vx/2),-4,0);	
+wpnAngle = point_direction(x,y-wpnYOff,mouse_x,mouse_y);
+//if (!attackCD && !onWall && Input.kAttackP) {
+//	attackCD = 30;
+//	hitBox = HitBoxCreate(24*facing,20,4*facing,-16,5,2+abs(vx/2),-4,0);	
+//}
+//if (attackCD) attackCD--;
+
+//Shooting
+if (Input.mLeft && canFire && (ammo > 0) && !reloading) {
+	var ldirx,ldiry;
+	ldirx = lengthdir_x(wpn[weapon,weaponProperties.offset]+16,wpnAngle);
+	ldiry = lengthdir_y(wpn[weapon,weaponProperties.offset]+16,wpnAngle);
+	if (weapon == weapons.shotgun) {
+		for(i=0;i<3;i++) {
+			var spread = random_range(-10,10);
+			var bullet = instance_create_layer(x+ldirx,y-wpnYOff+ldiry,"Instances",wpn[weapon,weaponProperties.object]);
+			bullet.sprite_index = wpn[weapon,weaponProperties.bulletSprite];
+			bullet.image_angle	= wpnAngle+spread;
+			bullet.dir	= wpnAngle+spread;
+			bullet.spd = wpn[weapon,weaponProperties.bulletSpeed];
+			bullet.team = team;
+			bullet.range = wpn[weapon,weaponProperties.range];
+			bullet.dmg = wpn[weapon,weaponProperties.damage];
+		}
+			canFire = false;
+			fireCD	= wpn[weapon,weaponProperties.fireRate];
+			ammo--;
+		} else {
+			var bullet = instance_create_layer(x+ldirx,y-wpnYOff+ldiry,"Instances",wpn[weapon,weaponProperties.object]);
+			bullet.sprite_index = wpn[weapon,weaponProperties.bulletSprite];
+			bullet.image_angle	= wpnAngle;
+			bullet.dir	= wpnAngle;
+			bullet.spd = wpn[weapon,weaponProperties.bulletSpeed];
+			bullet.team = team;
+			bullet.range = wpn[weapon,weaponProperties.range];
+			bullet.dmg = wpn[weapon,weaponProperties.damage];
+			canFire = false;
+			fireCD	= wpn[weapon,weaponProperties.fireRate];
+			ammo--;
+		}
+		
+	
+	//SFX
+	var snd = wpn[weapon,weaponProperties.soundEffect];
+	var pitch = random_range(0.95,1.0);
+	PlaySound(snd,pitch,0,1);
+	
+	//VFX
+	var bldirx,bldiry;
+	bldirx = lengthdir_x(wpn[weapon,weaponProperties.barrelOffset]+16,wpnAngle);
+	bldiry = lengthdir_y(wpn[weapon,weaponProperties.barrelOffset]+16,wpnAngle);
+	var flash = instance_create_depth(x+bldirx,y-wpnYOff+bldiry,-1000,obj_muzzleFlash);
+	var smoke = instance_create_depth(x+bldirx,y-wpnYOff+bldiry,-1001,obj_muzzleSmoke);
+	if (weapon != weapons.rockets) {
+		var casing = instance_create_depth(x,y-wpnYOff,-1000,obj_bulletCasing);
+		casing.vx = -facing*random_range(1,4);
+		casing.vy = random_range(-3,-4);
+		if weapon == weapons.shotgun {
+			casing.sprite_index = spr_shellCasing;
+		}
+	}
+	
+	wpnXScale = wpn[weapon,weaponProperties.shootXScale];
+	wpnYScale = wpn[weapon,weaponProperties.shootYScale];
+	Camera.shake = wpn[weapon,weaponProperties.cameraShake];
 }
-if (attackCD) attackCD--;
+
+//FireCD
+if (fireCD > 0) fireCD--;
+if (fireCD == 0) {
+	fireCD = -1;
+	canFire = true;
+}
+
+//Reload
+if (Input.kReload && !reloadT && !reloading && (ammo < wpn[weapon,weaponProperties.ammoClip])) || (ammo == 0 && !reloading) {
+	reloading = true;
+	reloadT = wpn[weapon,weaponProperties.reloadTime];
+	
+	//SFX
+	var snd = wpn[weapon,weaponProperties.soundReload];
+	PlaySound(snd,1,0,0.8);
+}
+if (reloadT > 0) reloadT--;
+if (reloadT == 0) {
+	reloadT = -1;
+	reloading = false;
+	ammo = wpn[weapon,weaponProperties.ammoClip];
+}
+
 #endregion
 

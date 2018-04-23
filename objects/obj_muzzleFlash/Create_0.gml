@@ -1,0 +1,2 @@
+/// @description 
+life = 2;

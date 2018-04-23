@@ -17,7 +17,7 @@ with(all) {
 	}
 }
 
-resume   = instance_create_layer(camx+(camw/2),camy+(camh/2)-32,"Instances",obj_button);
+resume   = instance_create_layer(camx+(camw/2),camy+(camh/2)-48,"Instances",obj_button);
 resume.num = 0;
 resume.text = "RESUME";
 resume.type = bType.resume;
@@ -25,7 +25,7 @@ resume.xscale = 1.2;
 resume.yscale = 1.2;
 resume.depth = -10000;
 
-endGame	 = instance_create_layer(camx+(camw/2),camy+(camh/2)+32,"Instances",obj_button);
+endGame	 = instance_create_layer(camx+(camw/2),camy+(camh/2)+48,"Instances",obj_button);
 endGame.num  = 1;
 endGame.text = "EXIT LEVEL";
 endGame.type = bType.endLevel;

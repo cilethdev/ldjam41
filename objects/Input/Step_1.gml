@@ -21,6 +21,8 @@ kAttack	= keyboard_check(attack1)			||	keyboard_check(attack2);
 kAttackP = keyboard_check_pressed(attack1)	||	keyboard_check_pressed(attack2);
 kThrow	= keyboard_check_pressed(throw1)	||	keyboard_check_pressed(throw2);
 
+kReload = keyboard_check_pressed(reload);
+
 mLeft   = mouse_check_button(mb_left);
 mRight  = mouse_check_button(mb_right);
 
@@ -29,3 +31,7 @@ mRightP = mouse_check_button_pressed(mb_right);
 
 mLeftR  = mouse_check_button_released(mb_left);
 mRightR = mouse_check_button_released(mb_right);
+
+//Shooting
+mLeft	= mouse_check_button(mb_left);
+mLeftP	= mouse_check_button_pressed(mb_left);

@@ -12,8 +12,19 @@ if !instance_exists(obj_player) {
 			lerpy = Approach(lerpy,defaultLerpy,1);
 		}
 	}
-	x = ReachTween(x,target.x,lerpx);
-	y = ReachTween(y,target.y-8,lerpy);
+	if instance_exists(Reticle) {
+		var zoom,pdir,dis,ldirx,ldiry,;
+		zoom = (obj_player.weapon = weapons.sniper)? 320 : 96;
+		pdir = point_direction(target.x,target.y-16,mouse_x,mouse_y);
+		dis  = (Input.mRight)? zoom : 16;
+		ldirx = lengthdir_x(dis,pdir);
+		ldiry = lengthdir_y(dis,pdir);
+		x = ReachTween(x,target.x+ldirx,lerpx);
+		y = ReachTween(y,target.y-16+ldiry,lerpy);
+	} else {
+		x = ReachTween(x,target.x,lerpx);
+		y = ReachTween(y,target.y-8,lerpy);
+	}
 	
 	if shake {
 		shake = Approach(shake,0,0.5);
@@ -21,15 +32,13 @@ if !instance_exists(obj_player) {
 		y += shake*choose(-1,1);
 	}
 	
+	var posx,posy;
+	posx = x-camw/2;
+	posy = y-camh/2;
 	
-	camera_set_view_pos(cam,x-camw/2,y-camh/2);
+	posx = clamp(posx,0,room_width-camw);
+	posy = clamp(posy,y-camh/2,room_height-camh);
+	
+	camera_set_view_pos(cam,posx+shake,posy+shake);
 }
 
-
-if Input.mRightP {
-	instance_create_layer(mouse_x,mouse_y,"Instances",obj_cameraFocus);
-}
-
-if keyboard_check_pressed(ord("1")) {
-	shake = 5;
-}
