@@ -5,16 +5,6 @@
     "name": "Phone",
     "eventList": [
         {
-            "id": "a98d086a-d48e-428b-8995-122a0d39b4c3",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "fc86914a-0ed9-4121-998a-ece778b68e8a"
-        },
-        {
             "id": "9d17afa0-fc75-43cf-b29b-aa4fe56ddc7b",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -52,6 +42,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 2,
+            "m_owner": "fc86914a-0ed9-4121-998a-ece778b68e8a"
+        },
+        {
+            "id": "043a8016-42c8-4ba8-b8b7-01f86e773ddf",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
             "m_owner": "fc86914a-0ed9-4121-998a-ece778b68e8a"
         }
     ],

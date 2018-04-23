@@ -1,3 +1,5 @@
+/// @description this exists to prevent the sprite from drawing.
+
 /// @description draws the phone by combining multiple layers.
 // You can write your code in this editor
 
@@ -6,7 +8,8 @@
 // base phone screen.
 //		may get warp affect applied to it.
 //		this is where the text conversation will appear.
-
+var bx = camera_get_view_x(view_camera[0]);
+var by = camera_get_view_y(view_camera[0]);
 //draw the screen
 if(!surface_exists(screenSurface)){
 	screenSurface = surface_create(surfaceWidth,surfaceHeight);
@@ -65,8 +68,6 @@ surface_set_target(phoneSurface); // begin drawing to the phone.
 			selected[2] = 1;
 			break;
 	}
-	
-	
 	PhoneDrawResponseMessage(phoneWidth/2,firstResponsey,response[0],responseKey[0],selected[0]);
 	PhoneDrawResponseMessage(phoneWidth/2,secondResponsey,response[1],responseKey[1],selected[1]);
 	PhoneDrawResponseMessage(phoneWidth/2,thirdResponsey,response[2],-1,selected[2]);
@@ -74,7 +75,7 @@ surface_reset_target(); // finish drawing to the phone.
 
 var rx = (dcos(-direction)*phoneWidth/2)-(dsin(-direction)*phoneHeight/2);
 var ry = (dsin(-direction)*phoneWidth/2)+(dcos(-direction)*phoneHeight/2);
-draw_surface_ext(phoneSurface,x-rx,y-ry,1,1,direction,c_white,1);
+draw_surface_ext(phoneSurface,bx+x-rx+ani_x,by+y-ry+ani_y,1,1,direction,c_white,1);
 //test zone
 //draw the last pressed key.
 draw_sprite(spr_replyKeys,lastKeyPressed,0,0);

@@ -335,6 +335,14 @@
             }
         },
         {
+            "Key": "23f70c75-b146-47e1-8648-2d79e46c9ef7",
+            "Value": {
+                "id": "e0c9d9ac-40f3-40db-bd42-c579c29aa51d",
+                "resourcePath": "scripts\\PhoneTooLate\\PhoneTooLate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "241a78ff-60a5-4254-a6f5-24ede31c736f",
             "Value": {
                 "id": "6704e15f-94a3-4da8-8489-bfa6c721fee8",
@@ -1503,6 +1511,14 @@
             }
         },
         {
+            "Key": "b9d8f3d6-0618-49d9-9724-8b0c808babd3",
+            "Value": {
+                "id": "e8c0a934-759e-470d-9729-f9aaead7f8a4",
+                "resourcePath": "scripts\\PhoneMeh\\PhoneMeh.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b9dc4c2d-4e1e-465e-a151-ea0e848fae81",
             "Value": {
                 "id": "1ccb1976-0b1c-4f45-9be8-9d1644365b49",
@@ -1667,6 +1683,14 @@
             "Value": {
                 "id": "42cb1377-25f4-4740-b0aa-a5af15422bde",
                 "resourcePath": "scripts\\GetDashDir\\GetDashDir.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d306f194-1c9d-438b-bd81-fe7939948ca0",
+            "Value": {
+                "id": "15c04646-75c1-42b5-9f39-c411357fd1a3",
+                "resourcePath": "scripts\\PhoneCorrect\\PhoneCorrect.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1951,6 +1975,14 @@
             }
         },
         {
+            "Key": "fcd0b3ae-e0e3-4bc0-8f07-6005cdb5ab23",
+            "Value": {
+                "id": "d7c77400-bbee-4560-86ae-78cc394ab05c",
+                "resourcePath": "scripts\\PhoneWrong\\PhoneWrong.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fdff1cff-5dfd-4148-af53-7ee24b7b0ad9",
             "Value": {
                 "id": "3e18a99d-a29f-449c-b045-91e95bd584e8",
@@ -1989,6 +2021,10 @@
         "d21e12b9-ccee-45d0-882c-b9788623e828",
         "70fd1393-d983-462b-af30-864567683089",
         "0feeaf1a-69e4-424a-9257-128bf328f0b8",
+        "d306f194-1c9d-438b-bd81-fe7939948ca0",
+        "b9d8f3d6-0618-49d9-9724-8b0c808babd3",
+        "fcd0b3ae-e0e3-4bc0-8f07-6005cdb5ab23",
+        "23f70c75-b146-47e1-8648-2d79e46c9ef7",
         "c78216a9-2609-44a9-8d41-c85870eeedc8",
         "9ca0b38e-4c8b-4af6-9065-02b4cc4ffa9d",
         "b392ddec-9055-4f81-998a-ca7bb1499698",

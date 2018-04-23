@@ -1,18 +1,28 @@
 /// @description set initial state of the phone.
 // You can write your code in this editor
+player = instance_find(obj_player,0);
+
+//get the screen size.
+guiWidth = display_get_gui_width();
+guiHeight = display_get_gui_height();
+phoneWidth = sprite_get_width(spr_phoneBackground);
+phoneHeight = sprite_get_height(spr_phoneBackground);
+
+//anchors
+anchorOutx = guiWidth/2;
+anchorOuty = guiHeight/2;
+anchorAwayx = guiWidth+phoneWidth*0.2;
+anchorAwayy = guiHeight*0.9;
+
+// phone state.
+phoneOut = false;
+idealx = anchorAwayx;
+idealy = anchorAwayy;
 
 timeText = 1;
 timeEndOfEvent = 15;
 timeBeginEvent = 0.5;
 timeToResponse = 10;
-
-//potentially an enum to represent different phone actions.
-// sitting off the screen
-// jumping, moving left/right, shooting, explosion, mixture of the different events?
-phoneWidth = sprite_get_width(spr_phoneBackground);
-phoneHeight = sprite_get_height(spr_phoneBackground);
-
-// hyp = sqrt((phoneWidth*phoneWidth+phoneHeight*phoneHeight)/4);
 
 //these numbers were all just gotten by measuring spr_phoneBackground.
 screenPaddingSide =  9;
@@ -35,10 +45,23 @@ surfaceHeight = 512;
 phoneSurface = -1; //needs to be a multiple of 2 for efficiency and must be larger than spr_phoneBackground.
 screenSurface = -1; //this is where the messages will be drawn to.  then the portion visible on the screen will be drawn onto the phone.
 
+ani_x = 0;
+ani_y = 0;
+
 //animation crap.
-ani_rumbleRate = 8;
-ani_rumbleScale = 5;
+ani_rumbleRate = 20;
+ani_rumbleScaleActive = 6;
+ani_rumbleScale = 0;
 ani_rumble = 0;
+
+ani_vibrateRate = 30;
+ani_vibrateScale = 3;
+ani_vibrate = 0;
+
+ani_breathRate = 0.5;
+ani_breathScaleActive = 50;
+ani_breathScale = 0;
+ani_breath = 0;
 
 ani_messageShift = 0; // this is used when a new message is added to the chain to allow the message to slide in.
 

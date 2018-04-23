@@ -3,6 +3,7 @@
 switch(responseState){
 	case ResponseState.noSelectionMade:
 		responseState = ResponseState.tooLate;
+		PhoneTooLate(player);
 	case ResponseState.correct:
 	case ResponseState.medium:
 	case ResponseState.wrong:
