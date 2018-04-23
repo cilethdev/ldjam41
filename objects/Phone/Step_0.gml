@@ -97,6 +97,8 @@ if(responseState == ResponseState.noSelectionMade){
 	}
 	if(keyboard_check_pressed(ord("K")) || keyboard_check_pressed(ord("I"))){ //k & i are always wrong because they do do well as a font button.
 		responseState = ResponseState.wrong;
+		PhoneWrong(player);
+		PhoneCreateSplash(x,y,direction,c_red);
 		PhoneSetEventAlarm(0);
 	}
 }

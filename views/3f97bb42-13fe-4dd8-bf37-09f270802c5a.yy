@@ -14,7 +14,8 @@
         "6ada814a-5298-4af8-ace8-e882eaa1ce4d",
         "030f02f3-9d96-4752-9a21-1174e77a1389",
         "347a47a8-4b01-4a3e-8a2b-b25c36bc909b",
-        "d63d70fd-a633-468d-a8b4-d06dd6d5eb7a"
+        "d63d70fd-a633-468d-a8b4-d06dd6d5eb7a",
+        "3e389db8-cd92-4467-99a9-af7e68a58dc1"
     ],
     "filterType": "GMObject",
     "folderName": "CONTROLLERS",

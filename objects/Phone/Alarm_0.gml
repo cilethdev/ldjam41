@@ -45,7 +45,7 @@ switch(responseState){
 		break;
 	case ResponseState.noEvent:
 		// get a new event
-		var event = GetMessageEvent();
+		var event = GetMessageEvent(events);
 		// add question to the text history.
 		textHistory = PhoneAddMessage(textHistory,false,event[0]); 
 		//responses
@@ -65,8 +65,10 @@ switch(responseState){
 		mediumResponseChain = event[5];
 		wrongResponseChain = event[6];
 		// set new response keys.
-		responseKey[0] = irandom(array_length_1d(keyCode));
-		responseKey[1] = irandom(array_length_1d(keyCode));
+		responseKey[0] = irandom(array_length_1d(keyCode)-1);
+		do{
+			responseKey[1] = irandom(array_length_1d(keyCode)-1);
+		}until(responseKey[1]!=responseKey[0]);
 		
 		//get a random too late response chain
 		tooLateResponseChain = GetTooLateResponseChain();

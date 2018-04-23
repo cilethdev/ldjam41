@@ -19,10 +19,11 @@ anchorAwayy = guiHeight*0.9;
 phoneOut = false;
 idealx = anchorAwayx;
 idealy = anchorAwayy;
+x= idealx;
+y= idealy;
 
 timeText = 1;
 timeEndOfEvent = 15;
-timeBeginEvent = 0.5;
 timeToResponse = 10;
 
 //these numbers were all just gotten by measuring spr_phoneBackground.
@@ -85,7 +86,8 @@ responseKey[0]=0;
 responseKey[1]=1;
 
 //text history stuff
-herName = "Babrie";
+herName = "Babrie"; // should get random name.
+events = PhoneDefineDialogues();
 
 //the response state
 response[0] = "          ";
@@ -113,12 +115,11 @@ enum ResponseState{
 responseState = ResponseState.noEvent;
 PhoneSetEventAlarm(timeToResponse);
 
-textHistory[0] = newMessage(false,"hello");
-
-textHistory = PhoneAddMessage(textHistory,true,"hey baby girl");
-textHistory = PhoneAddMessage(textHistory,false,"ewww.");
-textHistory = PhoneAddMessage(textHistory,true,"What do you do on any given sunday night? ;P");
-textHistory = PhoneAddMessage(textHistory,false,"Let me tell you a long and pointless story about my amazing pet dog whom i very much love. and you should definitiely care about this dog for some reason.");
-textHistory = PhoneAddMessage(textHistory,true,"Im a spy.");
-textHistory = PhoneAddMessage(textHistory,true,"shit");
+textHistory = []
+textHistory = PhoneAddMessage(textHistory,false,"Hello");
+textHistory = PhoneAddMessage(textHistory,true,"Hey");
+textHistory = PhoneAddMessage(textHistory,true,"How's it going?");
+textHistory = PhoneAddMessage(textHistory,false,"Fine");
+textHistory = PhoneAddMessage(textHistory,false,"You doing anything important right now?");
+textHistory = PhoneAddMessage(textHistory,true,"nope");
 
